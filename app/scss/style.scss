@@ -1,0 +1,433 @@
+@import "vars";
+@import "libs";
+@import "fonts";
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: none !important;
+}
+a{
+    color: $main-color;
+    text-decoration: none;
+    line-height: normal;
+}
+a,button{
+    cursor: pointer;
+}
+
+body{
+  font-family: $Pragma;
+}
+.wrapper{
+    position: relative;
+}
+.container{
+    max-width: 1240px;
+    width: 94%;
+    margin: 0 auto;
+}
+.hero{
+    position: relative;
+    background: url(../images/backgrounds/hero.jpg) center top no-repeat;
+    background-size: cover;
+    padding: 335px 0 270px;
+    &__content{
+        max-width: 505px;
+    }
+    &__title{
+        font-size: 40px;
+        line-height: 43px;
+        color: $white;
+        font-family: $Gilroy;
+        font-weight: 400;
+    }
+    &__list{
+        padding: 0;
+        list-style: none;
+    }
+    &__link{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        border-bottom: 1px solid rgba($white, .3);
+        font-size: 25px;
+        line-height: 29px;
+        font-family: $Gilroy;
+        font-weight: 500;
+        color: $white;
+        text-decoration: none;
+        padding: 20px;
+    }
+
+    &__link-icon{
+        width: 24px;
+        height: 24px;
+        margin-left: auto;
+    }
+}
+
+.title-page{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 135%;
+    font-family: Gilroy;
+    margin: 28px 0;
+    @include for-sm(){
+        font-size: 30px;
+        margin: 20px 0 24px;
+    }
+    @include for-tiny-mob(){
+        font-size: 22px;
+        margin: 20px 0;
+    }
+}
+.rubric{
+    display: inline-block;
+    margin: 28px 0 40px;
+    @include for-sm(){
+        margin: 24px 0 16px;
+    }
+    @include for-tiny-mob(){
+        margin: 20px 0 12px;
+        display: block;
+    }
+    &__list{
+        display: flex;
+        border-bottom: 1px solid $lines-color;
+        @include for-tiny-tablet(){
+            justify-content: space-between;
+        }
+    }
+    &__link{
+        font-size: 15px;
+        line-height: 22px;
+        color: $text-grey;
+        font-weight: 500;
+        position: relative;
+        padding-bottom: 16px;
+        transition: .3s;
+        &::after{
+            content: "";
+            display: none;
+            position: absolute;
+            height: 2px;
+            width: calc(100% + 2px);
+            background: $blue;
+            bottom: -1px;
+            left: 50%;
+            transform: translateX(-50%);
+            
+        }
+        &:hover{
+            color: $blue;
+        }
+    }
+    &__link.active{
+        color: $blue;
+        &::after{
+            display: block;
+        }
+    }
+    &__link + &__link{
+        margin-left: 32px;
+        @include for-tiny-mob(){
+            margin-left: 15px;
+        }
+    }
+}
+.news-page{
+    &__main-block{
+        padding: 56px 0 120px;
+        position: relative;
+        overflow: hidden;
+        background-color: $fill-blocks1;
+    }
+    &__row{
+        margin-right: -20px;
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        @include for-tiny-tablet(){
+            margin-right: 0;
+        }
+    }
+    &__item-container{
+        width: 33.333333333333333%;
+        box-sizing: border-box;
+        padding-right: 20px;
+        margin-bottom: 32px;
+        @include for-md(){
+            width: 50%;
+        }
+        @include for-tiny-tablet(){
+            width: 100%;
+            padding-right: 0;
+        }
+
+    }
+    &__button-show-more{
+        margin: 24px auto 0;
+        display: block;
+        @include for-tiny-tablet(){
+            margin-top: 0;
+        }
+    }
+}
+.button{
+    display: block;
+    transition: .3s;
+    font-size: 15px;
+    color: $blue;
+    font-weight: 500;
+    padding: 14px 32px;
+    border: 1px solid $lines-color;
+    background-color: transparent;
+    box-sizing: border-box;
+    border-radius: 8px;
+    text-align: center;
+    line-height: 22px;
+    &:hover{
+        border-color: $blue;
+        background-color: $blue;
+        color: #fff;
+    }
+}
+.news-item{
+    border-radius: 8px;
+    background-color: #fff;
+    transition: .4s;
+    max-width: 400px;
+    &__img-container{
+        height: 208px;
+        width: 100%;
+        border-radius: 8px;
+        position: relative;
+        overflow: hidden;
+    }
+    &__img{
+        display: block;
+        height: 100%;
+        position: relative;
+        background-color: #fff;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 8px;
+        background-size: cover;
+        transition: 1.5s;
+        &:hover{
+            transform: scale(1.2);
+        }
+    }
+    &__body{
+        padding: 24px 32px 32px;
+    }
+    &__title{
+        font-size: 15px;
+        line-height: 22px;
+        font-weight: 500;
+        margin-bottom: 32px;
+        display: block;
+        transition: .3s;
+        &:hover{
+            color: $blue;
+        }
+    }
+    &__teg{
+        display: inline-block;
+        line-height: 22px;
+        font-size: 14px;        
+        text-transform: uppercase;
+        color: $text-grey;
+        font-family: $Pragmatica-Book;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+    &:hover{
+        box-shadow: 0 0 25px 0 rgba($color: #000000, $alpha: 0.15);
+    }
+    @include for-tiny-tablet(){
+        margin: 0 auto 20px;
+    }
+}
+.date{
+    color: $text-grey;
+    margin-bottom: 24px;
+    line-height: 22px;
+    font-size: 15px;
+    display: block;
+    font-family: $Pragmatica-Book;
+}
+.hide-for-tiny-tablet{
+    @include for-tiny-mob(){
+        display: none;
+    }
+}
+.show-for-tiny-tablet{
+    display: none;
+    @include for-tiny-mob(){
+        display: inline;
+    }
+}
+.text-page{
+    padding: 0 0 120px;
+    @include for-tiny-tablet{
+        padding-bottom: 80px;
+    }
+    p{
+        font-size: 15px;
+        line-height: 22px; 
+        font-family: $Pragmatica-Book;
+    }
+    h3{
+        display: block;
+        margin: 30px 0 15px;
+        font-size: 20px;
+        font-family: $Pragmatica-Book;
+    }
+    li{
+        font-size: 15px;
+        line-height: 22px; 
+        font-family: $Pragmatica-Book;
+        margin-top: 15px;
+        &::before{
+            content: "•";
+        }
+    }
+    p+p{
+        margin-top: 15px;
+    }
+    &__content{
+        display: flex;
+    }
+    &__main-container{
+        width: 68%;
+        padding-right: 116px;
+        box-sizing: border-box;
+        @include for-lg(){
+            padding-right: 50px;
+        }
+        @include for-md(){
+            width: 100%;
+            padding-right: 0;
+        }
+    }
+    &__img-container{
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 24px;
+        height: 356px;
+        border-radius: 8px;
+        @include for-tiny-mob{
+            height: 180px;
+        }
+    }
+    &__img{
+        position: relative;
+        display: block;
+        height: 100%;
+        max-width: 100%;
+        width: 100%;
+
+    }
+    &__sidebar{
+        padding: 48px;
+        background: #F7F7FC;
+        border-radius: 15px;
+        height: 100%;
+        @include for-md(){
+            display: none;
+        }
+    }
+    &__sidebar-title{
+        margin-bottom: 40px;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 22px;
+    }
+    &__item{
+        margin-top: 24px;
+        padding-bottom: 40px;
+        background-color: transparent;
+        border-bottom: 1px solid $lines-color;
+        &:last-child{
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+        &:hover{
+            box-shadow: none;
+        }
+    }
+    &__item-body{
+        padding: 16px 0 0;
+    }
+    &__item-date{
+        margin-bottom: 16px;
+    }
+    &__item-title{
+        margin-bottom: 24px;
+    }
+}
+.page-number{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+    padding: 15px 30px 9px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    background-color: $fill-blocks1;
+    @include for-tiny-tablet{
+       margin-top: 60px;
+    }
+    .icon{
+        height: 12px;
+        width: 12px;
+        fill: $main-color;
+    }
+    &__link{
+        padding: 7px 12px;
+        border-radius: 4px;
+        height: 100%;
+        line-height: 22px;
+        font-size: 14px;
+        text-align: center;
+        font-family: $Pragmatica-Book;
+        transition: .3s;
+        &:hover{
+            color: $blue;
+            background-color: #fff;
+        }
+    }
+    &__link.active{
+        background-color: #fff;
+        color: $blue;
+        box-shadow: 0 0 10px 0 rgba($color: #000000, $alpha: 0.15);
+    }
+    &__link--prev, &__link--next{
+        padding: 0;
+        color: $additional-color2;
+        &:hover{
+            background-color: transparent;
+        }
+        @include for-tiny-tablet{
+            display: none;
+        }
+        
+    }
+    &__link--prev{
+        margin-right: 30px;
+        @include for-lit-desktop(){
+            margin-right: 20px;
+        }
+    }
+    &__link--next{
+        margin-left: 30px;
+        @include for-lit-desktop(){
+            margin-left: 20px;
+        }
+    }
+}
+

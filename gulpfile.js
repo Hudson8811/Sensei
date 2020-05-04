@@ -29,6 +29,7 @@ gulp.task('css', function(){
   return gulp.src([
     'node_modules/normalize.css/normalize.css',
     'node_modules/slick-carousel/slick/slick.css',
+    'app/css/nice-select.min.css'
   ])
     .pipe(concat('_libs.scss'))
     .pipe(gulp.dest('app/scss'))
@@ -48,7 +49,9 @@ gulp.task('script', function(){
 gulp.task('js', function(){
   return gulp.src([
     'node_modules/slick-carousel/slick/slick.js',
-    'app/js/jquery.arcticmodal.js'
+    'app/js/jquery.arcticmodal.js',
+    'app/js/jquery.nice-select.min.js',
+    'app/js/mask.js'
   ])
     .pipe(concat('libs.min.js'))
     .pipe(uglify())

@@ -10,7 +10,15 @@ $(document).ready(function() {
   $(".garanty-btn").click(function(){
     $("#garanty-modal").arcticmodal();
   });
-  
+  $(".become-dealer--link").click(function(){
+    $("#become-dealer").arcticmodal();
+  });
+  $(".popular-prod__help-link").click(function(){
+    $("#modal-help").arcticmodal();
+  });
+
+ 
+  $(".numbox").mask("+7 (999) 999-99-99");
 });
 $(".conditioners-types__button").click(function() {
     $(this).toggleClass("open");
@@ -101,6 +109,23 @@ $(".conditioners-types__button").click(function() {
         return false;
      });
   });
+  $(function(){
+
+    $(".garanty-modal__tabs-list").on("click", ".garanty-modal__tabs-list-item", function(){
+  
+       var tabs = $(".garanty-modal__tabs-list-item"),
+              cont = $(".garanty-modal__tabs-content");
+  
+         // Удаляем классы active
+          tabs.removeClass("active");
+         cont.removeClass("active");
+         // Добавляем классы active
+        $(this).addClass("active");
+         cont.eq($(this).index()).addClass("active");
+  
+        return false;
+     });
+  });
 
 
 
@@ -161,3 +186,7 @@ $(".conditioners-types__button").click(function() {
 
 
  
+
+  $(document).ready(function() {
+    $('select').niceSelect();
+  });

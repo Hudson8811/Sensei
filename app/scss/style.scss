@@ -26,9 +26,17 @@ body{
       padding-top: 56px;
   }
 }
+
+// body{
+//     height: 100%;
+// }
+// html{
+//     height: 100%;
+// }
 .wrapper{
     position: relative;
-
+    min-height: auto;
+    height: 100%;
     @include for-md(){
         overflow: hidden;
     }
@@ -108,7 +116,11 @@ body{
 .arcticmodal-container { overflow: auto; margin: 0; padding: 0; border: 0; border-collapse: collapse; }
 *:first-child+html .arcticmodal-container { height: 100% }
 .arcticmodal-container_i { height: 100%; margin: 0 auto; width:100%; }
-.arcticmodal-container_i2 { padding: 24px; margin: 0; border: 0; vertical-align: middle; }
+.arcticmodal-container_i2 { padding: 24px; margin: 0; border: 0; vertical-align: middle;
+    @include for-tiny-tablet(){
+        padding: 15px;
+    }
+ }
 .arcticmodal-error { padding: 20px;  border-radius: 10px; background: #000; color: #fff; }
 
 .hero{
@@ -116,21 +128,48 @@ body{
     background: url(../images/backgrounds/hero.jpg) center top no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    padding: 335px 0 270px;
+    padding: 179px 0;
+
+    @include for-tiny-tablet(){
+        padding: 30px 0;
+    }
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
     &__content{
-        max-width: 505px;
+        max-width: 590px;
+        border-radius: 15px;
+        box-sizing: border-box;
+        background-color: rgba($blue, .9);
+       padding: 56px 80px 65px 64px;
+
+        @include for-md(){
+            margin: 0 auto;
+            padding: 30px 20px;
+        }
     }
     &__title{
         font-size: 40px;
-        line-height: 43px;
+        line-height: 54px;
         color: $white;
         font-family: $Gilroy;
         font-weight: 400;
+        margin-bottom: 56px;
+
+        @include for-md(){
+            font-size: 30px;
+            line-height: 41px;
+        }
+        @include for-tiny-tablet(){
+            font-size: 22px;
+            line-height: 30px;
+        }
     }
     &__list{
         padding: 0;
         list-style: none;
+    }
+    &__nav{
+        box-sizing: border-box;
+        padding-right: 35px;
     }
     &__link{
         display: flex;
@@ -144,12 +183,19 @@ body{
         color: $white;
         text-decoration: none;
         padding: 20px;
+
+        @include for-tiny-tablet(){
+            font-size: 18px;
+            line-height: 21px;
+            padding: 10px;
+        }
     }
 
     &__link-icon{
         width: 24px;
         height: 24px;
         margin-left: auto;
+        flex-shrink: 0;
     }
 }
 .section-head{
@@ -162,6 +208,10 @@ body{
         font-family: $Gilroy;
         font-weight: 400;
         text-align: center;
+
+        &--left{
+            text-align: left;
+        }
 
         @include for-md(){
             font-size: 30px;
@@ -236,6 +286,9 @@ body{
     }
 }
 .footer{
+    position: relative;
+    z-index: 10s;
+    // margin-top: -506px;
     background-color: $footer-bg;
     padding: 59px 0 24px;
 
@@ -694,6 +747,10 @@ body{
         letter-spacing: 0.13em;
         text-transform: uppercase;
 
+        b{
+            margin-left: 8px;
+        }
+
         @include for-md(){
             @include PragmaBook();
             font-size: 14px;
@@ -1047,7 +1104,7 @@ body{
         top: 50%;
         transform: translateY(-40%);
 
-        @include for-md-mob(){
+        @include for-md(){
             display: none;
         }
 
@@ -1616,9 +1673,14 @@ body{
 
     &__link-more{
         position: absolute;
-        bottom: 90px;
+        bottom: -15px;
         transform: none;
-
+        @include for-md(){
+            bottom: 115px;
+        }
+        @include for-tiny-mob(){
+            bottom: 90px;
+        }
         .link-more__icon{
           @include for-tiny-tablet(){
               display: none;
@@ -1675,6 +1737,7 @@ body{
         font-size: 14px;
         line-height: 17px;
         color: $main-color;
+        cursor: pointer;
 
         @include for-md(){
             padding: 17px 39px 17px 21px;
@@ -4260,6 +4323,10 @@ body{
     position: relative;
     &.garanty-modal{
         max-width: 1240px;
+
+        @include for-lit-mob(){
+            max-width: 280px;
+        }
     }
     .arcticmodal-close{
         position: absolute;
@@ -4285,6 +4352,14 @@ body{
         padding: 72px 165px 0;
         border-bottom: 1px solid $lines-color;
         border-radius: 15px 15px 0 0;
+        @include for-md{
+            padding: 40px 60px 0;
+        }
+        @include for-tiny-tablet{
+            padding: 15px;
+            padding-bottom: 0;
+        }
+        
     }
     &__title{
         font-size: 36px;
@@ -4292,11 +4367,26 @@ body{
         font-family: $Gilroy;
         font-weight: 400;
         margin-bottom: 64px;
+        @include for-md{
+            font-size: 30px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        @include for-tiny-tablet{
+            margin-top: 35px;
+            margin-bottom: 15px;
+            font-size: 20px;
+            line-height: 24px;
+        }
     }
     &__tabs-list{
         display: flex;
         box-sizing: border-box;
         padding: 0 20px;
+        @include for-sm{
+            flex-direction: column;
+            padding: 0;
+        }
 
     }
     &__tabs-list-item{
@@ -4313,6 +4403,21 @@ body{
         background-color: $lines-color2;
         color: $main-color;
         cursor: pointer;
+        
+        @include for-sm{
+            margin: 0;
+            border-radius: 0;
+        }
+        @include for-tiny-tablet{
+           padding: 15px 10px;
+           font-size: 16px;
+        }
+        @include for-lit-mob{
+            padding: 6px;
+            font-size: 14px;
+        }
+        
+        
 
         &.active{
             position: relative;
@@ -4325,6 +4430,19 @@ body{
         box-sizing: border-box;
         padding: 47px 165px 96px;
         display: none;
+        @include for-md{
+            padding: 40px 90px 60px;
+        }
+        @include for-sm{
+            padding: 40px 60px 60px;
+        }
+        @include for-tiny-tablet{
+            padding: 30px;
+            padding-top: 15px;
+        }
+        @include for-lit-mob{
+            padding: 15px;
+        }
 
         &.active{
             display: block;
@@ -4341,6 +4459,14 @@ body{
                 max-width: 665px;
                 box-sizing: border-box;
                 padding-left: 24px;
+                @include for-md{
+                    font-size: 14px;
+                }
+                @include for-tiny-tablet{
+                   padding-left: 18px;
+                   font-size: 12px;
+                   line-height: 15px;
+                }
 
                 &:before{
                     content: '';
@@ -4357,6 +4483,11 @@ body{
                 margin-top: 10px;
             }
         }
+        .modal-form__button{
+            @include for-tiny-tablet(){
+                margin-top: 30px;
+            }
+        }
     }
     &__desc{
         font-size: 18px;
@@ -4365,6 +4496,17 @@ body{
         font-family: $Pragma;
         margin-bottom: 32px;
         max-width: 632px;
+        @include for-md{
+            margin-bottom: 20px;
+            font-size: 16px;
+            line-height: 22px;
+        }
+        @include for-tiny-tablet{
+            margin-bottom: 10px;
+            font-size: 14px;
+            line-height: 16px;
+            text-align: center;
+        }
     }
     &__allert{
         margin-top: 40px;
@@ -4373,16 +4515,34 @@ body{
         line-height: 22px;
         color: $main-color;
         font-family:$Pragmatica-Book ;
+        @include for-sm{
+            margin-top: 20px;
+            font-size: 14px;
+            line-height: 18px;
+        }
+        @include for-tiny-tablet{
+            font-size: 14px;
+            line-height: 16px;
+        }
 
         b{
             font-size: 20px;
             color: $blue;
             font-weight: 500;
+            @include for-sm{
+                font-size: 18px;
+            }
         }
         
     }
     &__link-container{
         margin: 45px 0 64px;
+        @include for-sm{
+            margin: 30px 0 40px;
+        }
+        @include for-tiny-tablet{
+            margin: 15px 0 20px;
+        }
     }
     &__link{
         font-size: 16px;
@@ -4393,6 +4553,12 @@ body{
         &:hover{
             text-decoration: none;
         }
+        @include for-tiny-tablet{
+            display: block;
+            text-align: center;
+            font-size: 14px;
+            
+        }
     }
 
     &__down-box{
@@ -4400,12 +4566,19 @@ body{
         align-items: center;
         justify-content: space-between;
         margin-bottom: 72px;
+        @include for-md{
+            flex-direction: column;
+        }
 
         p{
             font-size: 15px;
             line-height: 22px;
             color: $main-color;
             font-family: $Pragmatica-Book;
+            @include  for-tiny-mob{
+                font-size: 14px;
+                line-height: 20px;
+            }
         }
         a{
             flex-shrink: 0;
@@ -4417,6 +4590,10 @@ body{
             color: $main-color;
             font-family: $Pragmatica-Book;
             transition: .3s;
+            @include for-md{
+                margin-left: 0;
+                margin-top: 30px;
+            }
             img{
                 flex-shrink: 0;
                 margin-right: 20px;
@@ -4445,6 +4622,12 @@ body{
         line-height: 27px;
         font-family: $Pragma;
         margin-bottom: 40px;
+
+        @include for-tiny-mob(){
+            padding: 20px;
+            font-size: 16px;
+            line-height: 20px;
+        }
     }
 
     &__row{
@@ -4452,8 +4635,17 @@ body{
         flex-wrap: wrap;
         margin-right: -28px;
 
+        @include for-tiny-tablet(){
+            padding: 0 0 30px;
+            margin-right: 0;
+        }
+        
         &--big{
             padding: 0 48px 65px;
+            
+            @include for-tiny-tablet(){
+                padding: 0 24px 30px;
+            }
         }
     }
     &__item-container{
@@ -4461,6 +4653,21 @@ body{
         box-sizing: border-box;
         padding-right: 28px;
         margin-bottom: 24px;
+
+        &--w100{
+            width: 100%;
+        }
+
+        @include for-tiny-tablet(){
+            width: 100%;
+            margin-bottom: 16px;
+            padding-right: 0;
+        }
+        &--tablet-w100{
+            @include for-md(){
+                width: 100%;
+            }
+        }
     }
 
     &__input{
@@ -4497,9 +4704,42 @@ body{
         margin-top: 44px;
         padding-right: 20px;
         box-sizing: border-box;
+
+        @include for-tiny-tablet(){
+            margin-top: 20px;
+            flex-direction: column;
+            padding-right: 0;
+        }
+
+        &--no-padding{
+            padding: 0;
+
+            .contacts__form-label--checkbox{
+                display: block;
+                color: $main-color;
+                @include for-md(){
+                    display: flex;
+                }
+            }
+            .contacts__link-checkbox{
+                font-size: 13px;
+                margin-left: 10px;
+                margin-right: 40px;
+
+                @include for-md(){
+                    margin-left: 0;
+                    margin-right: 0;
+                }
+            }
+        }
+
+        .modal-form__row{
+            width: 100%;
+        }
     }
     .contacts__form-group{
         margin: 0;
+        display: flex;
     }
 
     &__button{
@@ -4527,6 +4767,10 @@ body{
     justify-content: space-between;
     margin-left: -2px;
 
+    @include for-tiny-mob(){
+        flex-wrap: wrap;
+    }
+
     &__label{
         font-size: 15px;
         line-height: 18px;
@@ -4553,7 +4797,7 @@ body{
         font-size: 30px;
         line-height: 33px;
         margin-bottom: 48px;
-        font-weight: $Gilroy;
+        font-family: $Gilroy;
         font-weight: 400;
         @include for-tiny-tablet(){
             font-size: 22px;
@@ -4565,12 +4809,20 @@ body{
         display: flex;
         flex-wrap: wrap;
         margin-right: -22px;
+        @include for-md{
+            margin-right: 0;
+        }
     }
 
     &__container{
         width: 50%;
         box-sizing: border-box;
         padding-right: 22px;
+        @include for-md{
+            width: 100%;
+            padding-right: 0;
+            margin-bottom: 20px;
+        }
     }
 
     
@@ -4599,6 +4851,9 @@ body{
     &__body{
         box-sizing: border-box;
         padding: 0 40px 0 50px;
+        @include  for-tiny-mob{
+            padding: 0 20px;
+        }
     }
     &__title{
         font-size: 60px;
@@ -4609,8 +4864,16 @@ body{
         font-weight: 400;
         margin-bottom: 24px;
 
+        @include  for-tiny-mob{
+            font-size: 44px;
+            margin-bottom: 10px;
+        }
+
         span{
             font-size: 30px;
+            @include  for-tiny-mob{
+                font-size: 28px;
+            }
         }
     }
     &__undertitle{
@@ -4625,7 +4888,13 @@ body{
         line-height: 22px;
         color: $additional-color2;
         font-family: $Pragmatica-Book;
+        min-height: 132px;
         margin: 32px 0 47px;
+        @include  for-tiny-mob{
+            margin: 20px 0;
+            font-size: 14px;
+            line-height: 18px;
+        }
     }
 
     &__list-item{
@@ -4636,6 +4905,7 @@ body{
         line-height: 22px;
         color: $text-grey;
         font-family: $Pragmatica-Book;
+        
 
         &::before{
             display: none;
@@ -4653,3 +4923,96 @@ body{
 
     
 }
+.callback-form{
+    max-width: 860px;
+    border-radius: 15px;
+    &--lit{
+        max-width: 757px;
+    }
+    @include for-tiny-tablet(){
+        padding-top: 40px;
+    }
+
+    @include for-tiny-mob(){
+        max-width: 280px;
+    }
+   &__image{
+    margin-bottom: 40px;
+    height: 278px;
+
+    @include for-md(){
+        margin-bottom: 32px;
+    }
+    @include for-tiny-tablet(){
+        display: none;
+    }
+   }
+
+    img{
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 15px 15px 0 0;
+    }
+
+    &__section-head{
+        padding: 0 48px 40px;
+    }
+}
+
+.modal-form-select.nice-select{
+    width: 100%;
+    border-radius: 10px;
+    padding: 0 30px 0 16px;
+    height: 52px;
+    line-height: 52px;
+    background-color: $white;
+    font-size: 15px;
+    color: $additional-color2;
+    font-family: $Pragmatica-Book;
+    border-color: $lines-color;
+    
+    .current{
+        position: relative;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        display: block;
+    }
+    
+
+   .list{
+        width: 100%;
+        border-radius: 0 0 15px 15px;
+        background-color: $fill-blocks1;
+        border: none;
+        margin-top: 0;
+        .selected{
+            font-weight: 400;
+        }
+    }
+    .option{
+        position: relative;
+        background-color: $fill-blocks1;
+
+        &:last-child{
+            display: none;
+        }
+
+        &:before{
+            content: '';
+            position: absolute;
+            left: 16px;
+            height: 1px;
+            bottom: 0;
+            width: calc(100% - 16px - 39px);
+            background-color: $lines-color2;
+        }
+
+    }
+}
+// .subfooter{
+//     height: 506px;
+// }

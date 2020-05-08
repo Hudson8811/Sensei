@@ -20,6 +20,11 @@ $(document).ready(function() {
  
   $(".numbox").mask("+7 (999) 999-99-99");
 });
+
+$(".card__mod-button").click(function(){
+    $(this).toggleClass("active");
+    $(".card__catalog-caterories").slideToggle();
+});
 $(".conditioners-types__button").click(function() {
     $(this).toggleClass("open");
     $(".conditioners-types__button .icon").toggleClass("rotate90");

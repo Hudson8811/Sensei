@@ -39,7 +39,7 @@ $(".conditioners-types__button").click(function() {
     $(this).prev().toggleClass("expand");
     $(this).toggleClass("rotate180");
   });
-  $(".burger").click(function() {
+  $(".header-main__burger").click(function() {
     $(this).toggleClass("active");
     $(".main-menu").toggleClass("active")
   });
@@ -60,7 +60,10 @@ $(".conditioners-types__button").click(function() {
 
    
   });
-
+  $(".hero__btn").click(function() {
+    $(this).next().slideToggle(300);
+   
+  });
   $(".about__caption").on('click', function(){
 
   
@@ -114,6 +117,7 @@ $(".conditioners-types__button").click(function() {
         return false;
      });
   });
+  
   $(function(){
 
     $(".garanty-modal__tabs-list").on("click", ".garanty-modal__tabs-list-item", function(){
@@ -170,24 +174,33 @@ $(".conditioners-types__button").click(function() {
   });
 
 
-  var acc = document.getElementsByClassName("card__accordion-title");
-  var i;
+  // var acc = document.getElementsByClassName("card__accordion-title");
+  // var i;
   
-  for (i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function() {
-      /* Toggle between adding and removing the "active" class,
-      to highlight the button that controls the panel */
-      this.classList.toggle("active");
+  // for (i = 0; i < acc.length; i++) {
+  //   acc[i].addEventListener("click", function() {
+  //     /* Toggle between adding and removing the "active" class,
+  //     to highlight the button that controls the panel */
+  //     this.classList.toggle("active");
   
-      /* Toggle between hiding and showing the active panel */
-      var panel = this.nextElementSibling;
-      if (panel.style.display === "block") {
-        panel.style.display = "none";
-      } else {
-        panel.style.display = "block";
-      }
-    });
-  }
+  //     /* Toggle between hiding and showing the active panel */
+  //     var panel = this.nextElementSibling;
+  //     if (panel.style.display === "block") {
+  //       panel.style.display = "none";
+  //     } else {
+  //       panel.style.display = "block";
+  //     }
+  //   });
+  // }
+  // $(document).ready(function () {
+
+	// 	$('.card__accordion-title').click(function () {
+	// 		$(this).toggleClass('active').next().slideToggle();
+	// 		$('.card__accordion-title').not(this).removeClass('active').next().slideUp();
+  //       });
+
+  //   });
+    
 
 
  
@@ -195,3 +208,9 @@ $(".conditioners-types__button").click(function() {
   $(document).ready(function() {
     $('select').niceSelect();
   });
+
+  $(".card__accordion-title").on('click', function(){
+    $(this).toggleClass("active");
+    $(this).next().slideToggle(300);
+    
+    });

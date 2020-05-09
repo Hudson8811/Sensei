@@ -159,7 +159,7 @@ textarea{
 .arcticmodal-container_i { height: 100%; margin: 0 auto; width:100%; }
 .arcticmodal-container_i2 { padding: 24px; margin: 0; border: 0; vertical-align: middle;
     @include for-tiny-tablet(){
-        padding: 15px;
+        padding: 10px;
     }
  }
 .arcticmodal-error { padding: 20px;  border-radius: 10px; background: #000; color: #fff; }
@@ -169,7 +169,7 @@ textarea{
     background: url(../images/backgrounds/hero.jpg) center top no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    min-height: calc(100vh - 186px);
+    min-height: calc(100vh - 156px);
     display: flex;
     align-items: flex-end;
     @include for-md(){
@@ -195,6 +195,7 @@ textarea{
         }
     }
     &__nav{
+       @include for-md(){
         display: none;
         position: absolute;
         top: 32px;
@@ -205,6 +206,7 @@ textarea{
         border-radius: 0 0 8px 8px;
         box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
         width: 100%;
+       }
     }
     &__list{
         display: flex;
@@ -359,19 +361,19 @@ textarea{
     }
 }
 .title-page{
-    font-style: normal;
     font-weight: normal;
     font-size: 40px;
     line-height: 54px;
     font-family: $Gilroy;
     margin: 28px 0;
-    @include for-sm(){
+    @include for-md(){
         font-size: 30px;
         line-height: 35px;
         margin: 20px 0 24px;
     }
     @include for-tiny-mob(){
         font-size: 22px;
+        line-height: 27px;
         margin: 20px 0;
     }
 }
@@ -447,6 +449,10 @@ textarea{
         }
         &--company{
             max-width: 150px;
+
+            @include for-md(){
+                margin-right: 250px;
+            }
         }
         &--consumer{
             max-width: 229px;
@@ -1560,7 +1566,7 @@ textarea{
         width: 28px;
 
         display: none;
-
+        transition: .3s;
 
         @include for-md(){
             display: block;
@@ -2085,6 +2091,10 @@ textarea{
             
         }
 
+        li > a.active{
+            color: $blue;
+        }
+
         > li > a{
             &:before{
                 content: '';
@@ -2332,7 +2342,7 @@ textarea{
 }
 .breadcrumbs{
    
-    padding: 32px 0 56px;
+    padding: 32px 0 20px;
     &__list{
         position: relative;
         white-space: nowrap;
@@ -2558,6 +2568,7 @@ textarea{
         font-weight: 500;
         margin-bottom: 26px;
         display: block;
+        color: $main-color;
         transition: .3s;
         &:hover{
             color: $blue;
@@ -4592,9 +4603,7 @@ textarea{
     &.garanty-modal{
         max-width: 1240px;
 
-        @include for-lit-mob(){
-            max-width: 280px;
-        }
+       
     }
     .arcticmodal-close{
         position: absolute;
@@ -4605,6 +4614,7 @@ textarea{
         background: url(../images/svg/modal-close.svg) center center no-repeat;
         background-size: contain;
         transition: .6s;
+        z-index: 10;
         cursor: pointer;
         &:hover{
             transform: rotate(360deg);
@@ -4614,18 +4624,24 @@ textarea{
 }
 .garanty-modal{
     max-width: 1240px;
+    position: relative;
+    overflow: hidden;
+    
     &__head{
         background-color: $fill-blocks1;
         box-sizing: border-box;
         padding: 72px 165px 0;
         border-bottom: 1px solid $lines-color;
         border-radius: 15px 15px 0 0;
-        @include for-md{
-            padding: 40px 60px 0;
+        @include for-md(){
+            padding: 64px 48px 0;
         }
-        @include for-tiny-tablet{
-            padding: 15px;
+        @include for-sm(){
+            padding: 40px 24px 0;
             padding-bottom: 0;
+            border-bottom: 0;
+            background-color: $white;
+
         }
         
     }
@@ -4635,16 +4651,22 @@ textarea{
         font-family: $Gilroy;
         font-weight: 400;
         margin-bottom: 64px;
-        @include for-md{
+        @include for-md(){
             font-size: 30px;
-            margin-bottom: 30px;
-            text-align: center;
+            line-height: 36px;
+            margin-bottom: 40px;
+            
         }
-        @include for-tiny-tablet{
-            margin-top: 35px;
-            margin-bottom: 15px;
-            font-size: 20px;
+        @include for-sm(){
+           
+            margin-bottom: 51px;
+            font-size: 22px;
             line-height: 24px;
+        }
+    }
+    &__tabs{
+        @include for-sm(){
+            padding-bottom: 40px;
         }
     }
     &__tabs-list{
@@ -4652,8 +4674,7 @@ textarea{
         box-sizing: border-box;
         padding: 0 20px;
         @include for-sm{
-            flex-direction: column;
-            padding: 0;
+           display: none;
         }
 
     }
@@ -4692,25 +4713,63 @@ textarea{
             z-index: 10;
             background-color: $blue;
             color: $white;
+
+            
         }
+    }
+    &__tabs-caption-mobile{
+        position: relative;
+        display: none;
+        padding: 26.5px 33px 26.5px 24px;
+        box-sizing: border-box;
+        border-radius: 10px;
+        margin-bottom: 8px;
+        font-size: 16px;
+        line-height: 19px;
+        background-color: #E9EEFC;
+        color: $main-color;
+        font-family: $Pragmatica-Book;
+       
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.12);
+        transition: .3s;
+
+        &.active{
+            background-color: $blue;
+            color: $white;
+
+            .garanty-modal__tabs-caption-arrow{
+                transform: rotate(180deg);
+                stroke: $white;
+            }
+        }
+
+        @include for-sm(){
+            display: flex;
+        }
+    }
+    &__tabs-caption-arrow{
+        position: absolute;
+        right: 19px;
+        top: 50%;
+        margin-top: -11px;
+        fill: none;
+        stroke: $main-color;
+        height: 28px;
+        width: 28px;
+        // transform: rotate(-90deg);
+        transition: .3s;
     }
     &__tabs-content{
         box-sizing: border-box;
         padding: 47px 165px 96px;
         display: none;
         @include for-md{
-            padding: 40px 90px 60px;
+            padding: 40px 50px 60px;
         }
         @include for-sm{
-            padding: 40px 60px 60px;
+            padding: 24px 24px;
         }
-        @include for-tiny-tablet{
-            padding: 30px;
-            padding-top: 15px;
-        }
-        @include for-lit-mob{
-            padding: 15px;
-        }
+      
 
         &.active{
             display: block;
@@ -4727,14 +4786,7 @@ textarea{
                 max-width: 665px;
                 box-sizing: border-box;
                 padding-left: 24px;
-                @include for-md{
-                    font-size: 14px;
-                }
-                @include for-tiny-tablet{
-                   padding-left: 18px;
-                   font-size: 12px;
-                   line-height: 15px;
-                }
+               
 
                 &:before{
                     content: '';
@@ -4754,6 +4806,7 @@ textarea{
         .modal-form__button{
             @include for-tiny-tablet(){
                 margin-top: 30px;
+                max-width: 100%;
             }
         }
     }
@@ -4770,10 +4823,9 @@ textarea{
             line-height: 22px;
         }
         @include for-tiny-tablet{
-            margin-bottom: 10px;
-            font-size: 14px;
-            line-height: 16px;
-            text-align: center;
+            font-size: 15px;
+            line-height: 18px;
+            margin-bottom: 24px;
         }
     }
     &__allert{
@@ -4799,7 +4851,9 @@ textarea{
             font-weight: 500;
             @include for-sm{
                 font-size: 18px;
+                display: block;
             }
+            
         }
         
     }
@@ -4834,8 +4888,11 @@ textarea{
         align-items: center;
         justify-content: space-between;
         margin-bottom: 72px;
-        @include for-md{
+        @include for-md(){
             flex-direction: column;
+            margin-bottom: 56px;
+            align-content: flex-start;
+            justify-content: flex-start;
         }
 
         p{
@@ -4860,7 +4917,8 @@ textarea{
             transition: .3s;
             @include for-md{
                 margin-left: 0;
-                margin-top: 30px;
+                margin-right: auto;;
+                margin-top: 40px;
             }
             img{
                 flex-shrink: 0;
@@ -4879,6 +4937,11 @@ textarea{
     &__container{
         box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.12);
         border-radius: 15px;
+
+        @include for-md(){
+            box-shadow: none;
+            margin: 0 -24px;
+        }
     }
     &__head{
         border-radius: 15px 15px 0 0;
@@ -4891,11 +4954,19 @@ textarea{
         font-family: $Pragma;
         margin-bottom: 40px;
 
-        @include for-tiny-mob(){
-            padding: 20px;
-            font-size: 16px;
-            line-height: 20px;
-        }
+       @include for-md{
+          
+           border-radius: 0;
+           margin-bottom: 32px;
+           padding: 41.5px 50px;
+       }
+
+       @include for-sm(){
+           padding: 0 24px;
+           background-color: transparent;
+           font-size: 18px;
+           line-height: 24px;
+       }
     }
 
     &__row{
@@ -4903,17 +4974,22 @@ textarea{
         flex-wrap: wrap;
         margin-right: -28px;
 
-        @include for-tiny-tablet(){
-            padding: 0 0 30px;
-            margin-right: 0;
-        }
+      
         
         &--big{
             padding: 0 48px 65px;
             
-            @include for-tiny-tablet(){
-                padding: 0 24px 30px;
+            @include for-md(){
+                padding: 0 50px ;
             }
+
+            @include for-sm(){
+                padding: 0 20px;
+            }
+        }
+
+        @include for-sm(){
+            margin-right: 0;
         }
     }
     &__item-container{
@@ -4926,7 +5002,7 @@ textarea{
             width: 100%;
         }
 
-        @include for-tiny-tablet(){
+        @include for-sm(){
             width: 100%;
             margin-bottom: 16px;
             padding-right: 0;
@@ -4973,11 +5049,15 @@ textarea{
         padding-right: 20px;
         box-sizing: border-box;
 
-        @include for-tiny-tablet(){
-            margin-top: 20px;
-            flex-direction: column;
-            padding-right: 0;
-        }
+       @include for-md(){
+           margin-top: 30px;
+       }
+
+       @include for-sm(){
+           flex-direction: column;
+           align-items: flex-start;
+           padding-right: 0;
+       }
 
         &--no-padding{
             padding: 0;
@@ -5035,19 +5115,50 @@ textarea{
     justify-content: space-between;
     margin-left: -2px;
 
-    @include for-tiny-mob(){
-        flex-wrap: wrap;
+    @include for-md(){
+        margin-left: 0;
+        justify-content: flex-start;
     }
 
+    
+
+    @include for-sm(){
+        flex-wrap: wrap;
+
+    }
+
+    @include for-md-mob(){
+        justify-content: space-between;
+    }
     &__label{
         font-size: 15px;
         line-height: 18px;
         color: $main-color;
         margin-right: 16px;
         font-family: $Pragmatica-Book;
+
+        @include for-sm(){
+            width: 100%;
+            box-sizing: border-box;
+            padding-top: 4px;
+            padding-left: 15px;
+            margin-right: 0;
+            margin-bottom: 16px;
+        }
     }
     span{
         margin: 0 5px;
+
+        @include for-md(){
+            margin: 0 12px;
+        }
+        @include for-sm(){
+            margin: 0 7px;
+        }
+
+        @include for-tiny-mob(){
+            margin: 0 5px;
+        }
     }
 
     &__input{
@@ -5068,7 +5179,8 @@ textarea{
         font-family: $Gilroy;
         font-weight: 400;
         @include for-md(){
-            text-align: center;
+            font-size: 22px;
+            line-height: 31px;
         }
         @include for-tiny-tablet(){
             font-size: 22px;
@@ -5092,7 +5204,14 @@ textarea{
         @include for-md{
             width: 100%;
             padding-right: 0;
-            margin-bottom: 20px;
+           
+            
+        }
+    }
+
+    &__container + &__container{
+        @include for-md(){
+            margin-top: 24px;
         }
     }
 
@@ -5105,9 +5224,14 @@ textarea{
     box-sizing: border-box;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.12);
     padding-bottom: 56px;
+    
     @include for-md(){
-        max-width: 500px;
+        
         margin: 0 auto;
+    }
+
+    @include for-sm(){
+        padding-bottom: 0;
     }
     &__image-container{
         background-color: #B9BCCF;
@@ -5115,8 +5239,13 @@ textarea{
         margin-bottom: 32px;
         border-radius: 15px 15px 0 0;
 
-        @include for-tiny-tablet(){
-            height: 100px;
+        @include for-md(){
+            height: 222px;
+            margin-bottom: 24px;
+        }
+
+        @include for-sm(){
+            display: none;
         }
         img{
             display: block;
@@ -5130,9 +5259,11 @@ textarea{
     &__body{
         box-sizing: border-box;
         padding: 0 40px 0 50px;
-        @include  for-tiny-mob{
-            padding: 0 20px;
+
+        @include for-sm(){
+            padding: 16px 24px 40px;
         }
+       
     }
     &__title{
         font-size: 60px;
@@ -5143,16 +5274,24 @@ textarea{
         font-weight: 400;
         margin-bottom: 24px;
 
-        @include  for-tiny-mob{
-            font-size: 44px;
-            margin-bottom: 10px;
+        @include  for-md{
+            text-align: left;
+            margin-bottom: 16px;
+        }
+
+        @include for-sm(){
+            font-size: 52px;
+            line-height: 55px;
+            margin-bottom: 0;
         }
 
         span{
             font-size: 30px;
-            @include  for-tiny-mob{
-                font-size: 28px;
+
+            @include for-sm(){
+                font-size: 22px;
             }
+           
         }
     }
     &__undertitle{
@@ -5161,6 +5300,10 @@ textarea{
         line-height: 20px;
         color: $main-color;
         font-family: $Pragma;
+
+        @include for-md(){
+            text-align: left;
+        }
     }
     &__desc{
         font-size: 15px;
@@ -5169,10 +5312,9 @@ textarea{
         font-family: $Pragmatica-Book;
         min-height: 132px;
         margin: 32px 0 47px;
-        @include  for-tiny-mob{
-            margin: 20px 0;
-            font-size: 14px;
-            line-height: 18px;
+        @include for-md(){
+            margin: 24px 0 32px;
+            min-height: auto;
         }
     }
 
@@ -5238,6 +5380,10 @@ textarea{
 
     &__section-head{
         padding: 0 48px 40px;
+
+        @include for-sm(){
+            padding: 0 21px 40px;
+        }
     }
 }
 
@@ -5310,3 +5456,660 @@ textarea{
         border-radius: 8px;
     }
 }
+
+.where-to-buy{
+    padding-bottom: 112px;
+    @include for-md(){
+        padding-bottom: 100px;
+    }
+    &__desc{
+        max-width: 408px;
+        font-size: 16px;
+        line-height: 19px;
+        font-family: $Pragmatica-Book;
+        color: $additional-color2;
+        
+        @include for-md(){
+            margin-bottom: 56px;
+        }
+
+        &--mobile{
+            display: none;
+            @include for-md(){
+                display: block;
+            }
+        }
+
+        &--desktop{
+            @include for-md(){
+                display: none;
+            }
+        }
+
+    }
+}
+
+  
+  .map__container {
+      margin-top: 49px;
+    position: relative;
+  }
+  
+  .map__title {
+    width: 170px;
+  }
+  
+  .map__info-blocks {
+    margin-top: 64px;
+  }
+  
+ 
+
+ 
+  
+  .map__image-block {
+    position: relative;
+   
+  }
+  
+  .map__image-block img {
+    max-width: 100%;
+  }
+  
+  .map__links {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  
+  .map__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+  }
+  
+  .map__link:hover .map__dot {
+    transform: scale(1.3);
+    background: #F02C38;
+  }
+  
+  .map__link_1 {
+    left: 21.2%;
+    top: 9.9%;
+  }
+  
+  .map__link_2 {
+    left: 47%;
+    top: 10.8%;
+  }
+  
+  .map__link_3 {
+    left: 12%;
+    top: 14.8%;
+  }
+  
+  .map__link_4 {
+    left: 63%;
+    top: 16%;
+  }
+  
+  .map__link_5 {
+    left: 29.7%;
+    top: 18.6%;
+  }
+  
+  .map__link_6 {
+    left: 43%;
+    top: 24.5%;
+  }
+  
+  .map__link_7 {
+    left: 5.8%;
+    top: 30.8%;
+  }
+  
+  .map__link_8 {
+    left: 22%;
+    top: 32%;
+  }
+  
+  .map__link_9 {
+    left: 58.5%;
+    top: 30.9%;
+  }
+  
+  .map__link_10 {
+    left: 72.9%;
+    top: 31.3%;
+  }
+  
+  .map__link_11 {
+    left: 86.1%;
+    top: 36.4%;
+  }
+  
+  .map__link_12 {
+    left: 45.6%;
+    top: 39.1%;
+  }
+  
+  .map__link_13 {
+    left: 16.1%;
+    top: 39.4%;
+  }
+  
+  .map__link_14 {
+    left: 31.4%;
+    top: 41.8%;
+    
+  }
+  
+  .map__link_15 {
+    left: 11.3%;
+    top: 46%;
+  }
+  
+  .map__link_16 {
+    left: 46.4%;
+    top: 47.6%;
+  }
+  
+  .map__link_17 {
+    left: 63.7%;
+    top: 47.6%;
+  }
+  
+  .map__link_18 {
+    left: -0.3%;
+    top: 50.4%;
+  }
+  
+  .map__link_19 {
+    left: 79.5%;
+    top: 55%;
+  }
+  
+  .map__link_20 {
+    left: 48.2%;
+    top: 60.3%;
+  }
+  
+  .map__link_21 {
+    left: 67.2%;
+    top: 60.4%;
+  }
+  
+  .map__link_22 {
+    left: 39%;
+    top: 66.4%;
+  }
+  
+  .map__link_23 {
+    left: 56%;
+    top: 69.2%;
+  }
+  
+  .map__link_24 {
+    left: 62.4%;
+    top: 85.3%;
+  }
+  
+  .map__dot {
+    width: 14px;
+    height: 14px;
+    background: #1B7ED9;
+    border: 2px solid #FFFFFF;
+    box-sizing: border-box;
+    transition: 0.3s;
+    border-radius: 100%;
+
+    @include for-md(){
+        width: 10px;
+        height: 10px;
+    }
+  }
+  
+  .map__obl {
+    font-size: 15px;
+    line-height: 18px;
+    color: #747D8A;
+    margin-top: 6px;
+    font-family: $Pragma;
+    font-weight: 500;
+
+    @include for-md(){
+        font-size: 13px;
+        line-height: 15px;
+    }
+  }
+  
+  .map__obl_table {
+    display: none;
+
+    @include for-md(){
+        display: block;
+    }
+  }
+  .map__obl_desktop{
+      @include for-md(){
+          display: none;
+      }
+  }
+  .map__mobile-list{
+      margin-bottom: 40px;
+    a{
+        display: block;
+        padding: 12.5px 0;
+        font-size: 15px;
+        line-height: 18px;
+        font-family: $Pragmatica-Book;
+        color: $main-color;
+        border-bottom: 1px solid #E9EEFC;
+    }
+  }
+  .map__mobile-form {
+    display: none;
+
+    @media (max-width: 760px){
+        display: block;
+    }
+  }
+  
+  .map__mobile-form button[type="submit"] {
+    margin-top: 24px;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 15px 10px;
+    background-color: $blue;
+    border: 1px solid $blue;
+    color: $white;
+    border-radius: 8px;
+    min-width: 170px;
+    &:hover{
+        background-color: $white;
+        color: $blue;
+    }
+  }
+  @media (max-width: 760px){
+    .map__image-block {
+       display: none;
+   }
+  }
+
+
+  
+  .map-modal {
+    width: 1240px;
+    box-sizing: border-box;
+    padding: 56px 64px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 15px;
+
+    @include for-md(){
+      padding: 70px 34px 56px;
+    }
+    @include for-sm(){
+        padding: 40px 15px ;
+    }
+  }
+  
+  .map-modal__title {
+    font-size: 30px;
+    color: #333C48;
+    margin-bottom: 30px;
+    font-family: $Gilroy;
+
+    @include for-md(){
+        font-size: 24px;
+
+    }
+  }
+  
+  .map-modal__flex {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .map-modal__col {
+    width: 430px;
+    margin-right: 30px;
+  }
+  
+  .map-modal__col:last-child {
+    margin-right: 0;
+  }
+  
+  .map-modal__type {
+
+    margin-bottom: 32px;
+    font-weight: 500;
+    font-size: 16px;
+    color: $additional-color2;
+  }
+  
+  .map-modal__city {
+    font-weight: 500;
+    font-size: 16px;
+    color: #333C48;
+  }
+  
+  .map-modal__address-block {
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 125%;
+    color: #333C48;
+  }
+  
+  .map-modal__address-name {
+    font-weight: 500;
+    color: $blue;
+  }
+  
+  .map-modal__address {
+    margin-top: 10px;
+  }
+  
+  .map-modal__phones {
+    margin-top: 10px;
+  }
+  
+  .map-modal__time {
+    margin-top: 10px;
+  }
+  
+  .map-modal .fancybox-button {
+    width: 50px;
+    height: 50px;
+    color: #B9BCCF;
+    opacity: 1;
+  }
+  
+  .map-modal .fancybox-button:hover {
+    color: #333C48;
+  }
+  
+
+
+  .custom-select {
+    position: relative;
+  }
+  
+  .custom-select__option {
+    overflow: hidden;
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+    font-family: inherit;
+    white-space: nowrap;
+    text-align: left;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    user-select: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+  
+  .custom-select__option-wrap {
+    position: relative;
+  }
+  
+  .custom-select__input {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    padding: 0;
+    border-width: 1px 0;
+    border-style: solid;
+    border-radius: 0;
+    font-family: inherit;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+  
+  .custom-select__dropdown {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    top: 100%;
+    left: 0;
+  }
+  
+  .custom-select--dropup .custom-select__dropdown {
+    top: auto;
+    bottom: 100%;
+  }
+  
+  /*
+   * Custom Select jQuery Plugin Theme
+   */
+  
+  .custom-select__option {
+    position: relative;
+    padding: 12px 0.75rem 12px 20px;
+    font-size: 15px;
+    color: $main-color;
+    font-family: $Pragmatica-Book;
+    
+    line-height: 1.5;
+  }
+  
+  .custom-select__option:focus {
+    outline: none;
+  }
+  
+
+  
+  .custom-select__option--value {
+    padding: 16.5px 24px 16.5px 20px;
+    background-color: #EFF3FE;
+    color: $additional-color2;
+    box-sizing: border-box;
+    border-radius: 10px;
+
+
+  }
+  
+  .custom-select__option--value::after {
+    position: absolute;
+    box-sizing: border-box;
+    width: 14px;
+    height: 11px;
+    top: 50%;
+    right: 0.75rem;
+    background: url("../images/svg/arrow-drop.svg") center center no-repeat;
+    transform: translateY(-50%);
+    content: "";
+  }
+  
+  .custom-select--active .custom-select__option--value::after {
+    transform: translateY(-50%) rotate(-180deg);
+  }
+  
+  .custom-select--active .custom-select__option--value {
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.12);
+    z-index: 300;
+  }
+  
+ 
+  
+ 
+  
+  .custom-select__option--selected {
+    background-color: #F7F7FC;
+  }
+  
+  .custom-select__option[disabled] {
+    color: #a1a1a1;
+    cursor: default;
+  }
+  
+  .custom-select__option[disabled]:hover,
+  .custom-select__option[disabled]:focus {
+    background-color: transparent;
+  }
+  
+  .custom-select__option-wrap {
+    overflow-y: auto;
+    max-height: 11.25rem;
+  }
+  
+  .custom-select__option-wrap::-webkit-scrollbar {
+    width: 16px;
+  }
+  
+  .custom-select__option-wrap::-webkit-scrollbar-thumb {
+    background-color: #e6e6e6;
+    background-clip: padding-box;
+    border-width: 0 4px;
+    border-style: solid;
+    border-color: transparent;
+  }
+  
+  .custom-select__input {
+    position: relative;
+    z-index: 1;
+    height: 2.25rem;
+    margin-top: -1px;
+    padding: 0 0.75rem;
+    border-color: #e6e6e6;
+    transform: translateY(1px);
+    font-size: 1rem;
+    color: #212121;
+  }
+  
+  .custom-select__input:focus {
+    outline: none;
+  }
+  
+  .custom-select--dropup .custom-select__input {
+    border-top-width: 0;
+    margin-top: 0;
+    transform: translateY(0);
+  }
+  
+  .custom-select__dropdown {
+    overflow: hidden;
+    z-index: 10;
+    top: calc(100% - 1px);
+    background-color: $fill-blocks1;
+
+
+    border-radius: 0 0 8px 8px;
+    overflow-y: auto;
+    max-height: 22.5rem;
+  }
+  
+  .custom-select--dropup .custom-select__dropdown {
+    bottom: calc(100% - 1px);
+    border-radius: 0 0 10px 10px;
+    padding: 20px 0 24px;
+  }
+  
+  .custom-select__dropdown .custom-select__option {
+    position: relative;
+  }
+  
+  .custom-select__dropdown .custom-select__option:not(:first-child):after {
+    content: "";
+    width: 90%;
+    height: 1px;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    display: block;
+    background: $lines-color2;
+  }
+  .fancybox-bg{
+      background-color: transparent;
+  }
+
+  .dr-options{
+      position: relative;
+      z-index: 20;
+      &__title{
+          position: relative;
+          z-index: 20;
+          display: flex;
+          align-items: center;
+          width: 100%;
+          height: 52px;
+          font-size: 15px;
+          line-height: 18px;
+          font-family: $Pragmatica-Book;
+          background-color: $white;
+          color: $additional-color2;
+          box-sizing: border-box;
+          padding:0 39px 0 16px;
+          border-radius: 10px;
+          border: 1px solid $lines-color;
+
+          &:before{
+              content: '';
+              position: absolute;
+              top: 50%;
+              right: 23px;
+              margin-top: -3px;
+              height: 6px;
+              width: 12px;
+              background: url(../images/svg/drop-down-arrow.svg) no-repeat center center;
+              background-size: contain;
+              z-index: 10;
+          }
+      }
+
+      &__drop-down{
+          position: absolute;
+          padding: 64px 39px 20px 16px;
+          box-sizing: border-box;
+          background-color: #F7F7FC;
+          top: 0;
+          left: 0;
+          width: 100%;
+          border-radius: 10px;
+          display: none;
+      }
+      
+      &__checkbox{
+          display: flex;
+          align-items: flex-start;
+          box-sizing: border-box;
+          padding: 13px 20px 13px 0;
+          cursor: pointer;
+
+          input{
+              display: none;
+          }
+          input:checked + b{
+              background:url(../images/svg/checked.svg) $blue no-repeat center center;
+          }
+          b{
+              height: 18px;
+              width: 18px;
+              border-radius: 2px;
+              border: 1px solid $blue;
+              margin-right: 16px;
+              flex-shrink: 0;
+          }
+          span{
+              padding-top: 2px;
+              font-size: 15px;
+              line-height: 18px;
+              color: $main-color;
+              font-family: $Pragmatica-Book;
+          }
+      }
+      &__checkbox + &__checkbox{
+          border-top: 1px solid $lines-color2;
+      }
+  }

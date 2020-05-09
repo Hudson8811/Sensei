@@ -1181,6 +1181,13 @@
           </ul>
          
         </div>
+        <div class="garanty-modal__tabs-caption-mobile">
+          Регистрация продукта
+          <svg class="garanty-modal__tabs-caption-arrow">
+            <use xlink:href="images/symbol/svg/sprite.symbol.svg#arrow-tabs"></use>
+           </svg>
+        </div>
+
         <div class="garanty-modal__tabs-content active">
           <p class="garanty-modal__desc">
             Спасибо за недавнюю покупку! Здесь вы можете зарегистрировать смонтированное оборудование, для получения официальной гарантии на 5 лет.
@@ -1210,7 +1217,7 @@
                 Регистрация продукта для повышения срока гарантии до 5 лет
               </div>
               <div class="modal-form__row modal-form__row--big">
-                <div class="modal-form__item-container">
+                <div class="modal-form__item-container modal-form__item-container--tablet-w100">
                   <label>
                     <input class="modal-form__input" type="text" name="name" placeholder="ФИО клиента" required>
                   </label>
@@ -1235,7 +1242,7 @@
                     <input class="modal-form__input" type="text" name="model" placeholder="Модель" required>
                   </label>
                 </div>
-                <div class="modal-form__item-container">
+                <div class="modal-form__item-container modal-form__item-container--tablet-w100">
                   <label>
                     <input class="modal-form__input" type="text" name="name" placeholder="ФИО монтажника " required>
                   </label>
@@ -1250,12 +1257,12 @@
                     <input class="modal-form__input" type="text" name="name" placeholder="Серийный номер внешнего блока " required>
                   </label>
                 </div>
-                <div class="modal-form__item-container">
+                <div class="modal-form__item-container modal-form__item-container--tablet-w100">
                   <label>
-                    <input class="modal-form__input numbox" type="text" name="phone" placeholder="Номер сертификата" required>
+                    <input class="modal-form__input " type="text" name="phone" placeholder="Номер сертификата" required>
                   </label>
                 </div>
-                <div class="modal-form__item-container">
+                <div class="modal-form__item-container modal-form__item-container--tablet-w100" >
                   <div class="modal-date">
                     <label  class="modal-date__label">
                         Дата установки
@@ -1285,6 +1292,12 @@
            
           </form>
 
+        </div>
+        <div class="garanty-modal__tabs-caption-mobile">
+          Руководство по гарантии
+          <svg class="garanty-modal__tabs-caption-arrow">
+            <use xlink:href="images/symbol/svg/sprite.symbol.svg#arrow-tabs"></use>
+           </svg>
         </div>
         <div class="garanty-modal__tabs-content ">
           <div class="garanty-modal__down-box">
@@ -1421,24 +1434,37 @@
             </label>
           </div>
           <div class="modal-form__item-container modal-form__item-container--tablet-w100">
-      
-              <select class="modal-form-select">
-                <!-- <option value="">Какой вид оборудования интересует</option> -->
-                <option value="Бытовые кондиционеры">Бытовые кондиционеры</option>
-                <option value="Полупромышленные кондиционеры">Полупромышленные кондиционеры</option>
-                <option value="Промышленные кондиционеры">Промышленные кондиционеры</option>
-                <option value="Мульти-сплит системы">Мульти-сплит системы</option>
-                <option value="Тепловые насосы">Тепловые насосы</option>
-                <option value=""  data-display="Какой вид оборудования интересует" selected>Полупромышленные кондиционеры</option>
-              </select>
- 
+              <div class="dr-options">
+                <label class="dr-options__title" for="">
+                  Какой вид оборудования интересует
+                </label>
+
+                <div class="dr-options__drop-down">
+                  <label class="dr-options__checkbox"><input type="checkbox"><b></b><span>
+                    Бытовые кондиционеры
+                  </span></label>
+                  <label class="dr-options__checkbox"><input type="checkbox"><b></b><span>
+                    Полупромышленные   кондиционеры
+                  </span></label>
+                 
+                  <label class="dr-options__checkbox"><input type="checkbox"><b></b><span>
+                    Промышленные кондиционеры
+                  </span></label>
+                  <label class="dr-options__checkbox"><input type="checkbox"><b></b><span>
+                    Мульти-сплит системы
+                  </span></label>
+                  <label class="dr-options__checkbox"><input type="checkbox"><b></b><span>
+                    Тепловые насосы
+                  </span></label>
+                </div>
+              </div>
           </div>
           <div class="modal-form__footer modal-form__footer--no-padding">
           <div class="modal-form__row">
            <div class="modal-form__item-container">
             <label class="contacts__form-group contacts__form-group--checkbox">
-              <input type="checkbox" id="checkbox2" class="contacts__form-input contacts__form-input--checkbox">
-              <label for="checkbox2" class="contacts__form-label contacts__form-label--checkbox">Я принимаю условия<a href="#" class="contacts__link-checkbox">Пользоваського соглашения</a></label>
+              <input type="checkbox" id="checkbox3" class="contacts__form-input contacts__form-input--checkbox">
+              <label for="checkbox3" class="contacts__form-label contacts__form-label--checkbox">Я принимаю условия<a href="#" class="contacts__link-checkbox">Пользоваського соглашения</a></label>
             </label>
            </div>
             <div class="modal-form__item-container">
@@ -1485,18 +1511,31 @@
             </label>
           </div>
           <div class="modal-form__item-container modal-form__item-container--tablet-w100">
-      
-              <select class="modal-form-select">
-                <!-- <option value="">Какой вид оборудования интересует</option> -->
-                <option value="Бытовые кондиционеры">Бытовые кондиционеры</option>
-                <option value="Полупромышленные кондиционеры">Полупромышленные кондиционеры</option>
-                <option value="Промышленные кондиционеры">Промышленные кондиционеры</option>
-                <option value="Мульти-сплит системы">Мульти-сплит системы</option>
-                <option value="Тепловые насосы">Тепловые насосы</option>
-                <option value=""  data-display="Площадь помещения" selected>Площадь помещения</option>
-              </select>
- 
-          </div>
+            <div class="dr-options">
+              <label class="dr-options__title" for="">
+                Площадь помещения
+              </label>
+
+              <div class="dr-options__drop-down">
+                <label class="dr-options__checkbox"><input type="checkbox"><b></b><span>
+                  Lorem, ipsum.
+                </span></label>
+                <label class="dr-options__checkbox"><input type="checkbox"><b></b><span>
+                  Lorem, ipsum.
+                </span></label>
+               
+                <label class="dr-options__checkbox"><input type="checkbox"><b></b><span>
+                  Lorem, ipsum.
+                </span></label>
+                <label class="dr-options__checkbox"><input type="checkbox"><b></b><span>
+                  Lorem, ipsum.
+                </span></label>
+                <label class="dr-options__checkbox"><input type="checkbox"><b></b><span>
+                  Lorem, ipsum.
+                </span></label>
+              </div>
+            </div>
+        </div>
           <div class="modal-form__footer modal-form__footer--no-padding">
           <div class="modal-form__row">
            <div class="modal-form__item-container">

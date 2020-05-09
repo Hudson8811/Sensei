@@ -40,7 +40,7 @@ $Pragmatica-Book: "Pragmatica Book",sans-serif;
     @media (max-width: 1024px) { @content; }
   }
   @mixin for-sm {
-    @media (max-width: 767px) { @content; }
+    @media (max-width: 760px) { @content; }
   }
   @mixin for-tiny-tablet {
     @media (max-width: 650px) { @content; }

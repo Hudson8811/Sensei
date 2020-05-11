@@ -628,7 +628,8 @@ $(".conditioners-types__button").click(function() {
   });
   $('.card__slider-img-side').slick({
     slidesToShow: 3,
-    slidesToScroll: 1,
+    slidesToScroll: 4,
+    autoplay:true,
     asNavFor: '.card__slider-img-main',
     dots: false,
     arrows:false,

@@ -3138,6 +3138,7 @@ textarea{
         border-radius: 15px;
         box-sizing: border-box;
         margin-left: -15px;
+        width: 100%;
         
         @include for-md(){
             margin-top: 20px;

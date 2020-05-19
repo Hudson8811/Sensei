@@ -6135,7 +6135,19 @@ textarea{
  
 .press-center{
     .slick-slider .slick-track{
-        align-items: flex-end;
+        align-items: stretch;
         display: flex;
+
+        .slick-slide{
+            height: auto;
+
+            > div{
+                height: 100%;
+            }
+            .press-center__slide{
+                height: 100%;
+                display: block !important;
+            }
+        }
     }
 }

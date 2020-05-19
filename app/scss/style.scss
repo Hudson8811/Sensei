@@ -6130,3 +6130,12 @@ textarea{
           border-top: 1px solid $lines-color2;
       }
   }
+
+
+ 
+.press-center{
+    .slick-slider .slick-track{
+        align-items: flex-end;
+        display: flex;
+    }
+}

@@ -3481,6 +3481,14 @@ textarea{
 }
 .card{
     margin-top: 10px;
+
+    ol{
+        margin-bottom: 40px;
+
+        @include for-sm(){
+            margin-bottom: 20px;
+        }
+    }
     &__main-container{
         display: flex;
         align-items: flex-start;

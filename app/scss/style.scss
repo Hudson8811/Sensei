@@ -23,7 +23,11 @@ html{
 }
 body{
   height: 100%;
-  font-family: $Pragma;
+  font-family: $Pragmatica-Book;
+  color: $additional-color2;
+  font-size: 15px;
+  line-height: 22px;
+
 
   @include for-tiny-tablet(){
       padding-top: 48px;
@@ -381,6 +385,7 @@ textarea{
     font-size: 40px;
     line-height: 54px;
     font-family: $Gilroy;
+    color: $main-color;
     margin: 28px 0;
     @include for-md(){
         font-size: 30px;
@@ -1054,7 +1059,7 @@ textarea{
         text-align: center;
     }
     &__title{
-        @include PragmaBook;
+        font-family: $Pragma;
         font-size: 16px;
         line-height: 19px;
         color: $main-color;
@@ -2595,6 +2600,7 @@ textarea{
         font-weight: 500;
         margin-bottom: 26px;
         display: block;
+        font-family: $Pragma;
         color: $main-color;
         transition: .3s;
         &:hover{
@@ -2649,6 +2655,7 @@ textarea{
 }
 .text-page{
     padding: 0 0 80px;
+    color: $main-color;
     @include for-tiny-tablet{
         padding-bottom: 40px;
     }
@@ -2750,6 +2757,7 @@ textarea{
     }
     &__sidebar-title{
         margin-bottom: 40px;
+        font-family: $Pragma;
         font-weight: 500;
         font-size: 20px;
         line-height: 22px;
@@ -2968,6 +2976,8 @@ textarea{
         line-height: 49px;  
         text-transform: uppercase;
         border-bottom: 1px solid $lines-color;
+        font-family: $Gilroy;
+        font-weight: 500;
         @include for-md{
             margin-bottom: 64px;
             margin-top: 19px;
@@ -3099,6 +3109,7 @@ textarea{
     }
 }
 .catalog-item{
+    color: $main-color;
     margin-bottom: 59px;
     &__main-row{
         display: flex;
@@ -3504,6 +3515,7 @@ textarea{
         }
     }
     &__slider-img-container{
+        flex-shrink: 0;
         width: 505px;
         margin-right: 72px;
         @include for-md{
@@ -3571,6 +3583,7 @@ textarea{
         display: flex;
         align-items: center;
         font-family: $Gilroy;
+        color: $main-color;
         font-size: 36px;
         line-height: 49px;
         font-weight: 500;
@@ -3671,7 +3684,10 @@ textarea{
         
     }
     &__text-container-title{
-        font-size: 16px;
+        font-size: 15px;
+        line-height: 18px;
+        color: $main-color;
+        font-family: $Pragma;
         margin-bottom: 10px;
     }
     &__text{
@@ -3885,9 +3901,9 @@ textarea{
             background-color: $lines-color2;
             text-align: center;
             color: #000000 !important;
-            font-family: $Pragmatica-Book;
-            font-size: 20px;
-            line-height: 30px;
+            font-family: $Pragma !important;
+            font-size: 20px !important;
+            line-height: 30px !important;
             cursor: pointer;
             &:first-child{
                 border-radius: 15px 0 0 0;
@@ -3896,7 +3912,8 @@ textarea{
                 border-radius: 0 15px 0 0;
             }
             @include for-l{
-                font-size: 17px;
+                font-size: 17px !important;
+                line-height: 20px !important;
             }
         }
         li.active{
@@ -3954,6 +3971,9 @@ textarea{
         line-height: 27px;
         font-weight: 500;
         margin-bottom: 14px;
+        color: $main-color;
+        font-family: $Pragma;
+
     }
     &__advantages-text{
         font-size: 15px;
@@ -3986,6 +4006,8 @@ textarea{
         font-weight: 500;
         font-size: 15px;
         line-height: 22px;
+        font-family: $Pragma;
+        color: $main-color;
     }
     &__description-video{
         margin-bottom: 40px;
@@ -4583,6 +4605,7 @@ textarea{
         line-height: 19px;
         padding-bottom: 8px;
         font-family: $Pragma;
+        color: $main-color;
         font-weight: 500;
         margin-bottom: 24px;
         border-bottom: 1px solid $lines-color;

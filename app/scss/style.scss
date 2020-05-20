@@ -26,7 +26,7 @@ body{
   font-family: $Pragma;
 
   @include for-tiny-tablet(){
-      padding-top: 56px;
+      padding-top: 48px;
   }
 }
 header{
@@ -93,7 +93,7 @@ textarea{
     flex-direction: column;
     height: 100%;
     @include for-md(){
-        overflow: hidden;
+        overflow-x: hidden;
     }
 }
 .container{
@@ -151,7 +151,7 @@ textarea{
   .burger.active .rect:nth-child(3) {
     transform: rotate(-45deg) translateX(8px) translateY(-8px);
 
-    @include for-md-mob(){
+    @include for-tiny-tablet(){
         transform: rotate(-45deg) translateX(7px) translateY(-7px);
     }
   }
@@ -201,6 +201,7 @@ textarea{
         @include for-md(){
             position: relative;
             max-width: 345px;
+            width: 94%;
             margin: 0 auto 32px;
             background-color: transparent;
 
@@ -1810,9 +1811,11 @@ textarea{
         transform: none;
         @include for-md(){
             bottom: 115px;
+            display: none;
         }
         @include for-tiny-mob(){
             bottom: 90px;
+           
         }
         .link-more__icon{
           @include for-tiny-tablet(){
@@ -1957,7 +1960,7 @@ textarea{
        }
     }
     @include for-tiny-tablet(){
-        padding: 11px 0 4px;
+        padding: 11px 0 11px;
     }
     .container{
        @include for-tiny-tablet(){
@@ -1999,6 +2002,7 @@ textarea{
 
         @include for-md(){
             display: block;
+            margin-left: auto;
         }
 
         @include for-tiny-tablet(){
@@ -2240,6 +2244,7 @@ textarea{
     }
 }
 .search{
+    display: none;
     position: relative;
     overflow: hidden;
     align-self: center;

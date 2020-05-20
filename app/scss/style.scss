@@ -3876,6 +3876,7 @@ textarea{
             padding: 25px 40px;
             background-color: $lines-color2;
             text-align: center;
+            color: #000000 !important;
             font-family: $Pragmatica-Book;
             font-size: 20px;
             line-height: 30px;
@@ -3998,6 +3999,12 @@ textarea{
     p{
         margin-bottom: 40px;
         font-weight: 500;
+        font-size: 15px;
+        line-height: 22px;
+        font-family: $Pragmatica-Book;
+        color: $additional-color2;
+    }
+    li{
         font-size: 15px;
         line-height: 22px;
         font-family: $Pragmatica-Book;

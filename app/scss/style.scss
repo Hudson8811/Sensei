@@ -1974,6 +1974,10 @@ textarea{
     }
     &__row{
         display: flex;
+
+        @include for-md(){
+            align-items: center;
+        }
     }
     &__logo{
         align-self: center;
@@ -1997,7 +2001,7 @@ textarea{
         height: 27px;
         align-self: center;
         margin-left: 32px;
-        margin-top: -7px;
+        
         display: none;
 
         @include for-md(){
@@ -2023,7 +2027,7 @@ textarea{
         flex-direction: column;
         align-items: center;
         display: none;
-        margin-top: -8px;
+       
 
         @include for-md(){
             display: flex;
@@ -2063,7 +2067,8 @@ textarea{
         width: 50%;
         opacity: 0;
         transition: .3s;
-        min-width: 320px;
+        min-width: 240px;
+        
     }
     padding-top: 18px;
     &__list{
@@ -2101,6 +2106,7 @@ textarea{
 
             @include for-md(){
                 padding: 15px 20px;
+                font-family: $Pragma;
             }
 
             &:hover{
@@ -2156,6 +2162,7 @@ textarea{
 .main-menu.active{
     transform: none;
     opacity: 1;
+    box-shadow: 0px 17px 20px rgba(0, 0, 0, 0.25);
 }
 .sub-menu{
     margin-top: -15px;

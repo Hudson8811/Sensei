@@ -9,213 +9,618 @@
 </head>
 <body>
     <div class="wrapper">
-        <header class="header"></header>
-        <main class="main">
-            <section class="news-page">
-                <div class="container">
-                    <h2 class="title-page">Пресс-центр</h2>
-                    <nav class="rubric">
-                        <div class="rubric__list">
+        <header class="header" id="header">
+            <div class="header-top">
+              <div class="container">
+                <div class="header-top__row">
+                  <a class="header-top__link become-dealer--link"  >
+                   Cтать дилером
+                  </a>
+                  <div class="header-top__right-side">
+                   <div class="header-top__check">
+                     <div class="header-top__check-icon-container">
+                       <img class="header-top__check-icon" src="images/svg/true2.svg" alt="">
+                     </div>
+                     Проверка подлинности
+                   </div>
+                   <div class="header-top__check garanty-btn">
+                    <div class="header-top__check-icon-container ">
+                     <img class="header-top__check-icon" src="images/svg/shield-blue.svg" alt="">
+                    </div>
+                    Регистрация гарантии
+                   </div>
+                   <a class="header-top__phone" href="tel:+380443642970">
+                     <svg class="header-top__phone-icon">
+                      <use xlink:href="images/symbol/svg/sprite.symbol.svg#icon-phone"></use>
+                     </svg>
+                    +38 (044) 3642970
+                   </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="header-main">
+              <div class="container">
+                <div class="header-main__row">
+                 <div class="header-main__logo">
+                   <a class="header-main__logo-image" href="/" ></a>
+                 </div>
+                 <nav class="main-menu">
+                   <ul class="main-menu__list">
+                     <li>
+                      <span>
+                       Продукция
+                      </span>
+                       <ul class="sub-menu">
+                         <li>
+                           <a href="">
+                             Бытовые кондиционеры
+                           </a>
+                           <div class="sub-menu__image-container">
+                             <img src="images/sub-menu-image.jpg" alt="">
+                           </div>
+                         </li>
+                         <li>
+                           <a href="">
+                             Полупромышленные кондиционеры
+                           </a>
+                         </li>
+                         <li>
+                           <a href="">
+                             Промышленные кондиционеры
+                           </a>
+                         </li>
+                         <li>
+                           <a href="">
+                             Мульти-сплит системы
+                           </a>
+                         </li>
+                         <li>
+                           <a href="">
+                             Тепловые насосы
+                           </a>
+                         </li>
+                       </ul>
+                     </li>
+                     <li>
+                       <a href="">
+                           Где купить 
+                       </a>
+                     </li>
+                     <li>
+                       <a href="">
+                        бренд
+                       </a>
+                     </li>
+                     <li>
+                       <a href="">
+                         Потребителю 
+                       </a>
+                     </li>
+                     <li>
+                       <a href="">
+                        Пресс-центр
+                       </a>
+                     </li>
+                     <li>
+                       <a href="">
+                         Контакты
+                       </a>
+                     </li>
+                   </ul>
+                 </nav>
+               
+                 <div class="search header-main__search">
+                   <div class="search__icon-container">
+                     <svg class="search__icon ">
+                       <use xlink:href="images/symbol/svg/sprite.symbol.svg#icon-lope"></use>
+                     </svg>
+                     <svg class="search__icon search__icon--close">
+                       <use xlink:href="images/symbol/svg/sprite.symbol.svg#icon-close"></use>
+                     </svg>
+                   </div>
+                   <form  class="search__form">
+                     <input class="search__input" type="text" placeholder="Поиск по сайту">
+                     <button class="search__button"></button>
+                   </form>
+                 </div>
+                 <a class="header-main__phone" href="tel:+380443642970">
+                   <svg class="header-main__phone-icon">
+                    <use xlink:href="images/symbol/svg/sprite.symbol.svg#icon-phone"></use>
+                   </svg>
+                 </a>
+                 <div class="header-main__burger burger">
+                   <span class="rect"></span>
+                   <span class="rect"></span>
+                   <span class="rect"></span>
+                 </div>
+                </div>
+              </div>
+            </div>
+          </header>
+          <main class="main">
+                <div class="breadcrumbs news-breadcrumbs">
+                    <div class="container">
+                        <nav class="breadcrumbs__nav">
+                            <ul class="breadcrumbs__list">
+                                <li class="breadcrumbs__list-item">
+                                    <a class="breadcrumbs__item" href="#">
+                                        Главная 
+                                    </a>
+                                </li>
+                                <li class="breadcrumbs__list-item">
+                                    <a class="breadcrumbs__item" href="#">
+                                        Пресс-центр
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <section class="news-page">
+                    <div class="container news-page__container">
+                        <h2 class="title-page news-page__title">Пресс-центр</h2>
+                        <nav class="rubric">
                             <a href="#" class="rubric__link active">Вс<span class="show-for-tiny-tablet">ё</span><span class="hide-for-tiny-tablet">e рубрики</span></a>
                             <a href="#" class="rubric__link">Новости</a>
                             <a href="#" class="rubric__link">Статьи</a>
                             <a href="#" class="rubric__link">Выставки</a>
-                        </div>
-                    </nav>
-                    
-                </div>
-                <div class="news-page__main-block">
-                    <div class="container">
-                        <div class="news-page__row">
-                            <div class="news-page__item-container">
-                                <div class="news-item news-page__item">
-                                    <div class="news-item__img-container">
-                                        <a href="#" class="news-item__img" style="background-image: url(images/news-page/img1.jpg);"></a>
-                                    </div>
-                                    <div class="news-item__body">
-                                        <div class="date news-item__date">6 марта 2020</div>
-                                        <a href="#" class="news-item__title">Как подобрать кондиционер для дома? Отвечает эксперт компании Sensei</a>
-                                        <a href="#" class="news-item__teg">#статьи</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="news-page__item-container">
-                                <div class="news-item news-page__item">
-                                    <div class="news-item__img-container">
-                                        <a href="#" class="news-item__img" style="background-image: url(images/news-page/img2.jpg);"></a>
-                                    </div>
-                                    <div class="news-item__body">
-                                        <div class="date news-item__date">5 марта 2020</div>
-                                        <a href="#" class="news-item__title">Установка кондиционеров Sensei в офисе американской IT компании UBISOFT г. Киев</a>
-                                        <a href="#" class="news-item__teg">#Новости</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="news-page__item-container">
-                                <div class="news-item news-page__item">
-                                    <div class="news-item__img-container">
-                                        <a href="#" class="news-item__img" style="background-image: url(images/news-page/img3.jpg);"></a>
-                                    </div>
-                                    <div class="news-item__body">
-                                        <div class="date news-item__date">2 марта 2020</div>
-                                        <a href="#" class="news-item__title">Итоги выставка климатической техники  «Евро Климат 2020» г. Харьков</a>
-                                        <a href="#" class="news-item__teg">#Новости</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="news-page__item-container">
-                                <div class="news-item news-page__item">
-                                    <div class="news-item__img-container">
-                                        <a href="#" class="news-item__img" style="background-image: url(images/news-page/img2.jpg);"></a>
-                                    </div>
-                                    <div class="news-item__body">
-                                        <div class="date news-item__date">5 марта 2020</div>
-                                        <a href="#" class="news-item__title">Установка кондиционеров Sensei в офисе американской IT компании UBISOFT г. Киев</a>
-                                        <a href="#" class="news-item__teg">#Новости</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="news-page__item-container">
-                                <div class="news-item news-page__item">
-                                    <div class="news-item__img-container">
-                                        <a href="#" class="news-item__img" style="background-image: url(images/news-page/img3.jpg);"></a>
-                                    </div>
-                                    <div class="news-item__body">
-                                        <div class="date news-item__date">2 марта 2020</div>
-                                        <a href="#" class="news-item__title">Итоги выставка климатической техники  «Евро Климат 2020» г. Харьков</a>
-                                        <a href="#" class="news-item__teg">#Новости</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="news-page__item-container">
-                                <div class="news-item news-page__item">
-                                    <div class="news-item__img-container">
-                                        <a href="#" class="news-item__img" style="background-image: url(images/news-page/img1.jpg);"></a>
-                                    </div>
-                                    <div class="news-item__body">
-                                        <div class="date news-item__date">6 марта 2020</div>
-                                        <a href="#" class="news-item__title">Как подобрать кондиционер для дома? Отвечает эксперт компании Sensei</a>
-                                        <a href="#" class="news-item__teg">#статьи</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="news-page__item-container">
-                                <div class="news-item news-page__item">
-                                    <div class="news-item__img-container">
-                                        <a href="#" class="news-item__img" style="background-image: url(images/news-page/img1.jpg);"></a>
-                                    </div>
-                                    <div class="news-item__body">
-                                        <div class="date news-item__date">6 марта 2020</div>
-                                        <a href="#" class="news-item__title">Как подобрать кондиционер для дома? Отвечает эксперт компании Sensei</a>
-                                        <a href="#" class="news-item__teg">#статьи</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="news-page__item-container">
-                                <div class="news-item news-page__item">
-                                    <div class="news-item__img-container">
-                                        <a href="#" class="news-item__img" style="background-image: url(images/news-page/img2.jpg);"></a>
-                                    </div>
-                                    <div class="news-item__body">
-                                        <div class="date news-item__date">5 марта 2020</div>
-                                        <a href="#" class="news-item__title">Установка кондиционеров Sensei в офисе американской IT компании UBISOFT г. Киев</a>
-                                        <a href="#" class="news-item__teg">#Новости</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="news-page__item-container">
-                                <div class="news-item news-page__item">
-                                    <div class="news-item__img-container">
-                                        <a href="#" class="news-item__img" style="background-image: url(images/news-page/img3.jpg);"></a>
-                                    </div>
-                                    <div class="news-item__body">
-                                        <div class="date news-item__date">2 марта 2020</div>
-                                        <a href="#" class="news-item__title">Итоги выставка климатической техники  «Евро Климат 2020» г. Харьков</a>
-                                        <a href="#" class="news-item__teg">#Новости</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="news-page__item-container">
-                                <div class="news-item news-page__item">
-                                    <div class="news-item__img-container">
-                                        <a href="#" class="news-item__img" style="background-image: url(images/news-page/img3.jpg);"></a>
-                                    </div>
-                                    <div class="news-item__body">
-                                        <div class="date news-item__date">2 марта 2020</div>
-                                        <a href="#" class="news-item__title">Итоги выставка климатической техники  «Евро Климат 2020» г. Харьков</a>
-                                        <a href="#" class="news-item__teg">#Новости</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="news-page__item-container">
-                                <div class="news-item news-page__item">
-                                    <div class="news-item__img-container">
-                                        <a href="#" class="news-item__img" style="background-image: url(images/news-page/img1.jpg);"></a>
-                                    </div>
-                                    <div class="news-item__body">
-                                        <div class="date news-item__date">6 марта 2020</div>
-                                        <a href="#" class="news-item__title">Как подобрать кондиционер для дома? Отвечает эксперт компании Sensei</a>
-                                        <a href="#" class="news-item__teg">#статьи</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="news-page__item-container">
-                                <div class="news-item news-page__item">
-                                    <div class="news-item__img-container">
-                                        <a href="#" class="news-item__img" style="background-image: url(images/news-page/img2.jpg);"></a>
-                                    </div>
-                                    <div class="news-item__body">
-                                        <div class="date news-item__date">5 марта 2020</div>
-                                        <a href="#" class="news-item__title">Установка кондиционеров Sensei в офисе американской IT компании UBISOFT г. Киев</a>
-                                        <a href="#" class="news-item__teg">#Новости</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="news-page__item-container">
-                                <div class="news-item news-page__item">
-                                    <div class="news-item__img-container">
-                                        <a href="#" class="news-item__img" style="background-image: url(images/news-page/img2.jpg);"></a>
-                                    </div>
-                                    <div class="news-item__body">
-                                        <div class="date news-item__date">5 марта 2020</div>
-                                        <a href="#" class="news-item__title">Установка кондиционеров Sensei в офисе американской IT компании UBISOFT г. Киев</a>
-                                        <a href="#" class="news-item__teg">#Новости</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="news-page__item-container">
-                                <div class="news-item news-page__item">
-                                    <div class="news-item__img-container">
-                                        <a href="#" class="news-item__img" style="background-image: url(images/news-page/img3.jpg);"></a>
-                                    </div>
-                                    <div class="news-item__body">
-                                        <div class="date news-item__date">2 марта 2020</div>
-                                        <a href="#" class="news-item__title">Итоги выставка климатической техники  «Евро Климат 2020» г. Харьков</a>
-                                        <a href="#" class="news-item__teg">#Новости</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="news-page__item-container">
-                                <div class="news-item news-page__item">
-                                    <div class="news-item__img-container">
-                                        <a href="#" class="news-item__img" style="background-image: url(images/news-page/img1.jpg);"></a>
-                                    </div>
-                                    <div class="news-item__body">
-                                        <div class="date news-item__date">6 марта 2020</div>
-                                        <a href="#" class="news-item__title">Как подобрать кондиционер для дома? Отвечает эксперт компании Sensei</a>
-                                        <a href="#" class="news-item__teg">#статьи</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <button class="button news-page__button-show-more">
-                            Показать еще
-                        </button>
+                        </nav>
                     </div>
-                </div>
-            </section>
-        </main>
+                    <div class="news-page__main-block">
+                        <div class="container">
+                            <div class="news-page__row">
+                                <div class="news-page__item-container">
+                                    <div class="news-item news-page__item">
+                                        <div class="news-item__img-container">
+                                            <a href="#" class="news-item__img" style="background-image: url(images/news-page/img1.jpg);"></a>
+                                        </div>
+                                        <div class="news-item__body">
+                                            <div class="date news-item__date">6 марта 2020</div>
+                                            <a href="#" class="news-item__title">Как подобрать кондиционер для дома? Отвечает эксперт компании Sensei</a>
+                                            <a href="#" class="news-item__teg">#статьи</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="news-page__item-container">
+                                    <div class="news-item news-page__item">
+                                        <div class="news-item__img-container">
+                                            <a href="#" class="news-item__img" style="background-image: url(images/news-page/img2.jpg);"></a>
+                                        </div>
+                                        <div class="news-item__body">
+                                            <div class="date news-item__date">5 марта 2020</div>
+                                            <a href="#" class="news-item__title">Установка кондиционеров Sensei в офисе американской IT компании UBISOFT г. Киев</a>
+                                            <a href="#" class="news-item__teg">#Новости</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="news-page__item-container">
+                                    <div class="news-item news-page__item">
+                                        <div class="news-item__img-container">
+                                            <a href="#" class="news-item__img" style="background-image: url(images/news-page/img3.jpg);"></a>
+                                        </div>
+                                        <div class="news-item__body">
+                                            <div class="date news-item__date">2 марта 2020</div>
+                                            <a href="#" class="news-item__title">Итоги выставка климатической техники  «Евро Климат 2020» г. Харьков</a>
+                                            <a href="#" class="news-item__teg">#Новости</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="news-page__item-container">
+                                    <div class="news-item news-page__item">
+                                        <div class="news-item__img-container">
+                                            <a href="#" class="news-item__img" style="background-image: url(images/news-page/img2.jpg);"></a>
+                                        </div>
+                                        <div class="news-item__body">
+                                            <div class="date news-item__date">5 марта 2020</div>
+                                            <a href="#" class="news-item__title">Установка кондиционеров Sensei в офисе американской IT компании UBISOFT г. Киев</a>
+                                            <a href="#" class="news-item__teg">#Новости</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="news-page__item-container">
+                                    <div class="news-item news-page__item">
+                                        <div class="news-item__img-container">
+                                            <a href="#" class="news-item__img" style="background-image: url(images/news-page/img3.jpg);"></a>
+                                        </div>
+                                        <div class="news-item__body">
+                                            <div class="date news-item__date">2 марта 2020</div>
+                                            <a href="#" class="news-item__title">Итоги выставка климатической техники  «Евро Климат 2020» г. Харьков</a>
+                                            <a href="#" class="news-item__teg">#Новости</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="news-page__item-container">
+                                    <div class="news-item news-page__item">
+                                        <div class="news-item__img-container">
+                                            <a href="#" class="news-item__img" style="background-image: url(images/news-page/img1.jpg);"></a>
+                                        </div>
+                                        <div class="news-item__body">
+                                            <div class="date news-item__date">6 марта 2020</div>
+                                            <a href="#" class="news-item__title">Как подобрать кондиционер для дома? Отвечает эксперт компании Sensei</a>
+                                            <a href="#" class="news-item__teg">#статьи</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="news-page__item-container">
+                                    <div class="news-item news-page__item">
+                                        <div class="news-item__img-container">
+                                            <a href="#" class="news-item__img" style="background-image: url(images/news-page/img1.jpg);"></a>
+                                        </div>
+                                        <div class="news-item__body">
+                                            <div class="date news-item__date">6 марта 2020</div>
+                                            <a href="#" class="news-item__title">Как подобрать кондиционер для дома? Отвечает эксперт компании Sensei</a>
+                                            <a href="#" class="news-item__teg">#статьи</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="news-page__item-container">
+                                    <div class="news-item news-page__item">
+                                        <div class="news-item__img-container">
+                                            <a href="#" class="news-item__img" style="background-image: url(images/news-page/img2.jpg);"></a>
+                                        </div>
+                                        <div class="news-item__body">
+                                            <div class="date news-item__date">5 марта 2020</div>
+                                            <a href="#" class="news-item__title">Установка кондиционеров Sensei в офисе американской IT компании UBISOFT г. Киев</a>
+                                            <a href="#" class="news-item__teg">#Новости</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="news-page__item-container">
+                                    <div class="news-item news-page__item">
+                                        <div class="news-item__img-container">
+                                            <a href="#" class="news-item__img" style="background-image: url(images/news-page/img3.jpg);"></a>
+                                        </div>
+                                        <div class="news-item__body">
+                                            <div class="date news-item__date">2 марта 2020</div>
+                                            <a href="#" class="news-item__title">Итоги выставка климатической техники  «Евро Климат 2020» г. Харьков</a>
+                                            <a href="#" class="news-item__teg">#Новости</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="news-page__item-container">
+                                    <div class="news-item news-page__item">
+                                        <div class="news-item__img-container">
+                                            <a href="#" class="news-item__img" style="background-image: url(images/news-page/img3.jpg);"></a>
+                                        </div>
+                                        <div class="news-item__body">
+                                            <div class="date news-item__date">2 марта 2020</div>
+                                            <a href="#" class="news-item__title">Итоги выставка климатической техники  «Евро Климат 2020» г. Харьков</a>
+                                            <a href="#" class="news-item__teg">#Новости</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="news-page__item-container">
+                                    <div class="news-item news-page__item">
+                                        <div class="news-item__img-container">
+                                            <a href="#" class="news-item__img" style="background-image: url(images/news-page/img1.jpg);"></a>
+                                        </div>
+                                        <div class="news-item__body">
+                                            <div class="date news-item__date">6 марта 2020</div>
+                                            <a href="#" class="news-item__title">Как подобрать кондиционер для дома? Отвечает эксперт компании Sensei</a>
+                                            <a href="#" class="news-item__teg">#статьи</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="news-page__item-container">
+                                    <div class="news-item news-page__item">
+                                        <div class="news-item__img-container">
+                                            <a href="#" class="news-item__img" style="background-image: url(images/news-page/img2.jpg);"></a>
+                                        </div>
+                                        <div class="news-item__body">
+                                            <div class="date news-item__date">5 марта 2020</div>
+                                            <a href="#" class="news-item__title">Установка кондиционеров Sensei в офисе американской IT компании UBISOFT г. Киев</a>
+                                            <a href="#" class="news-item__teg">#Новости</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="news-page__item-container">
+                                    <div class="news-item news-page__item">
+                                        <div class="news-item__img-container">
+                                            <a href="#" class="news-item__img" style="background-image: url(images/news-page/img2.jpg);"></a>
+                                        </div>
+                                        <div class="news-item__body">
+                                            <div class="date news-item__date">5 марта 2020</div>
+                                            <a href="#" class="news-item__title">Установка кондиционеров Sensei в офисе американской IT компании UBISOFT г. Киев</a>
+                                            <a href="#" class="news-item__teg">#Новости</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="news-page__item-container">
+                                    <div class="news-item news-page__item">
+                                        <div class="news-item__img-container">
+                                            <a href="#" class="news-item__img" style="background-image: url(images/news-page/img3.jpg);"></a>
+                                        </div>
+                                        <div class="news-item__body">
+                                            <div class="date news-item__date">2 марта 2020</div>
+                                            <a href="#" class="news-item__title">Итоги выставка климатической техники  «Евро Климат 2020» г. Харьков</a>
+                                            <a href="#" class="news-item__teg">#Новости</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="news-page__item-container">
+                                    <div class="news-item news-page__item">
+                                        <div class="news-item__img-container">
+                                            <a href="#" class="news-item__img" style="background-image: url(images/news-page/img1.jpg);"></a>
+                                        </div>
+                                        <div class="news-item__body">
+                                            <div class="date news-item__date">6 марта 2020</div>
+                                            <a href="#" class="news-item__title">Как подобрать кондиционер для дома? Отвечает эксперт компании Sensei</a>
+                                            <a href="#" class="news-item__teg">#статьи</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="button news-page__button-show-more">
+                                Показать еще
+                            </button>
+                        </div>
+                    </div>
+                </section>
+          </main>
+         <!--start footer-->
+      <footer class="footer" id="footer">
+        <div class="container">
+        <div class="footer__row footer__row--justify footer__row--wrap">
+        <div class="footer__column footer__column--production footer--desktop-and-tablet">
+            <div class="footer__list-title">
+            Продукция
+            </div>
+            <ul class="footer__list">
+            <li class="footer__list-item">
+                <a class="footer__list-link" href="#" >
+                Бытовые кондиционеры
+                </a>
+            </li>
+            <li class="footer__list-item">
+                <a class="footer__list-link" href="#" >
+                Полупромышленные кондиционеры
+                </a>
+            </li>
+            <li class="footer__list-item">
+                <a class="footer__list-link" href="#" >
+                Промышленные кондиционеры
+                </a>
+            </li>
+            <li class="footer__list-item">
+                <a class="footer__list-link" href="#" >
+                Мульти-сплит системы
+                </a>
+            </li>
+            <li class="footer__list-item">
+                <a class="footer__list-link" href="#" >
+                Тепловые насосы
+                </a>
+            </li>
+            </ul>
+        </div>
+        <div class="footer__column footer__column--company footer--desktop-and-tablet">
+            <div class="footer__list-title">
+            Компания
+            </div>
+            <ul class="footer__list">
+            <li class="footer__list-item">
+                <a class="footer__list-link" href="#" >
+                Бренд Sensei
+                </a>
+            </li>
+            <li class="footer__list-item">
+                <a class="footer__list-link" href="#" >
+                Технологии
+                </a>
+            </li>
+            <li class="footer__list-item">
+                <a class="footer__list-link" href="#" >
+                История компании
+                </a>
+            </li>
+            <li class="footer__list-item">
+                <a class="footer__list-link" href="#" >
+                Пресс-центр
+                </a>
+            </li>
+            <li class="footer__list-item">
+                <a class="footer__list-link" href="#" >
+                Стать дилером
+                </a>
+            </li>
+            <li class="footer__list-item">
+            <a class="footer__list-link" href="#" >
+                Контакты
+            </a>
+            </li>
+            </ul>
+            <div class="language footer__language">
+            <span class="language__switch">
+    
+                <span class="language__name">
+                Українська
+                </span>
+                <span class="language__icon">
+                <svg>
+                    <use xlink:href="images/symbol/svg/sprite.symbol.svg#icon-flagUkr">
+                </svg>
+                </span>
+            </span>
+            </div>
+        </div>
+        <div class="footer__column footer__column--consumer footer--desktop-and-tablet">
+            <div class="footer__list-title">
+            Потребителю
+            </div>
+        
+    
+            <ul class="footer__list">
+            <li class="footer__list-item">
+                <a class="footer__list-link" href="#" >
+                Где купить
+                </a>
+            </li>
+            <li class="footer__list-item">
+                <a class="footer__list-link" href="#" >
+                Скачать каталог
+                </a>
+            </li>
+            <li class="footer__list-item">
+                <a class="footer__list-link" href="#" >
+                Инструкции и документы
+                </a>
+            </li>
+            </ul>
+            <div class="footer__checks">
+            <a class="footer__check" href="#">
+            <span class="footer__check-icon-container">
+                <img src="images/svg/shield-2.svg" alt="">
+            </span>
+            Регистрация гарантии
+            </a>
+            <a class="footer__check footer__check--grey" href="#">
+            <span class="footer__check-icon-container">
+                <img src="images/svg/icon-true2.svg" alt="">
+            </span>
+            Проверка подлинности
+            </a>
+            </div>
+        </div>
+        <div class="footer__column footer__column--ml-auto footer__column--contacts">
+            <div class="footer__list-title">
+            Контакты
+            </div>
+            <div class="footer__info">
+            <div class="footer__info-title">
+                Главный офис
+            </div>
+            <div class="footer__number-container">
+                <a href="tel:+380443642970
+                " class="footer__number">+38 (044) 3642970
+                </a>
+            </div>
+            <div class="footer__number-container">
+                <a href="tel:+380443642971" class="footer__number">
+                +38 (044) 3642971
+                </a>
+            </div>
+            <div class="footer__number-container">
+                <a href="tel:+380443642972" class="footer__number">
+                +38 (044) 3642972
+                </a>
+            </div>
+            <nav class="social footer__social footer--mobile-flex">
+                <ul class="social__list">
+                <li class="social__list-item">
+                    <a href="#" class="social__link">
+                    <img src="images/svg/facebook.svg" alt="">
+                    </a>
+                </li>
+                <li class="social__list-item">
+                    <a href="#" class="social__link">
+                    <img src="images/svg/instagram.svg" alt="">
+                    </a>
+                </li>
+                <li class="social__list-item">
+                    <a href="#" class="social__link">
+                    <img src="images/svg/youtube.svg" alt="">
+                    </a>
+                </li>
+                </ul>
+            </nav>
+            </div>
+            <div class="footer__info">
+            <div class="footer__info-title">
+                Адрес 
+            </div>
+            <p class="footer__adress">
+                Украина, г. Киев, Киево-Святошинский р-н,
+                с. Чайки, ул. Антонова, 8 А
+            </p>
+            <div class="footer__email-container">
+                <a href="mailto:info@sensei.ua" class="footer__email">
+                info@sensei.ua
+                </a>
+            </div>
+            </div>
+            
+        </div>
+        <div class="footer__checks footer--mobile">
+            <a class="footer__check" href="#">
+            <span class="footer__check-icon-container">
+                <img src="images/svg/shield-2.svg" alt="">
+            </span>
+            Регистрация гарантии
+            </a>
+            <a class="footer__check footer__check--grey" href="#">
+            <span class="footer__check-icon-container">
+                <img src="images/svg/icon-true2.svg" alt="">
+            </span>
+            Проверка подлинности
+            </a>
+            </div>
+            <div class="language footer__language footer--mobile">
+            <span class="language__switch">
+    
+            <span class="language__name">
+                Укр.
+            </span>
+            <span class="language__icon">
+                <svg>
+                <use xlink:href="images/symbol/svg/sprite.symbol.svg#icon-flagUkr">
+                </svg>
+            </span>
+            </span>
+        </div>
+        </div>
+        <div class="footer__row footer__row--justify footer__row--align-center footer__row--mobile-column">
+        <div class="footer__logo-container">
+            <img class="footer__logo" src="images/svg/iso.svg" alt="" >
+            <div class="footer__logo-desc">
+            ©2020 Sensei <span>, климатическая техника</span>
+            <a class="footer__politics" href="#">
+                Политика конфиденциальности
+            </a>
+            </div>
+        </div>
+        
+        <nav class="social footer__social footer--desktop-and-tablet">
+            <ul class="social__list">
+            <li class="social__list-item">
+                <a href="#" class="social__link">
+                <img src="images/svg/facebook.svg" alt="">
+                </a>
+            </li>
+            <li class="social__list-item">
+                <a href="#" class="social__link">
+                <img src="images/svg/instagram.svg" alt="">
+                </a>
+            </li>
+            <li class="social__list-item">
+                <a href="#" class="social__link">
+                <img src="images/svg/youtube.svg" alt="">
+                </a>
+            </li>
+            </ul>
+        </nav>
+        <div class="creator footer__creator">
+            <p class="creator__desc">
+            Создание сайта:
+            </p>
+            <a class="creator__link creator__link--desktop" href="#" >
+            Умные <b>SEO</b> <br>
+            Технологии
+            </a>
+            <a class="creator__link creator__link--mobile" href="#" >
+            smartseotech.com.ua
+            </a>
+        </div>
+        </div>
+        </div>
+    </footer>
+     <!--end footer-->
     </div>
-    <footer class="footer"></footer>
+     
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+    <script src="js/libs.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

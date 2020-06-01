@@ -2696,7 +2696,7 @@ textarea{
             content: "•";
         }
     }
-    p+p{
+    p+p, ul+p, ol+p{
         margin-top: 15px;
     }
     &__content{

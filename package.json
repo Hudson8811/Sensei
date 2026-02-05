@@ -9,7 +9,7 @@
   "author": "Nikita Elagin",
   "license": "ISC",
   "devDependencies": {
-    "browser-sync": "^2.26.5",
+    "browser-sync": "^2.29.3",
     "del": "^5.0.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^6.1.0",
@@ -18,8 +18,8 @@
     "gulp-plumber": "^1.2.1",
     "gulp-rename": "^1.4.0",
     "gulp-replace": "^1.0.0",
-    "gulp-sass": "^4.0.2",
-    "gulp-svg-sprite": "^1.5.0",
+    "gulp-sass": "^6.0.1",
+    "gulp-svg-sprite": "^2.0.3",
     "gulp-svgmin": "^2.2.0",
     "gulp-uglify": "^3.0.2",
     "normalize.css": "^8.0.1"
